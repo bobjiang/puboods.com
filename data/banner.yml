@@ -1,0 +1,12 @@
+####################### Banner #########################
+style: "style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right"
+title : "Puboods Software Development Solutions"
+subtitle: |
+  Brings your vision to life with innovation
+content : |
+  Our comprehensive software development services are designed to bring your vision to life with precision and innovation. Our expertise extends to Ethereum and Solana dApp development, where we build secure and efficient decentralized applications that redefine what's possible in the blockchain space. Additionally, our AI development services harness the power of artificial intelligence to create intelligent systems that enhance productivity and decision-making. Complementing these offerings, our technology consulting services provide strategic guidance to help you navigate the ever-evolving tech landscape, ensuring your projects are not only successful but also future-proof. 
+button:
+  label : "Enquiry Now"
+  link : "mailto:hi@puboods.com?subject=Enquiry for Software Development Solutions"
+image : "images/banner.jpg"
+

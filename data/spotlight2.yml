@@ -1,0 +1,9 @@
+####################### Spotlight #########################
+style: "style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
+title : "Blockchain dApp Development"
+content: |
+  Our dApp development service specializes in creating decentralized applications on Ethereum and Solana, designed to revolutionize your business with cutting-edge blockchain technology. Our agile development process ensures rapid iteration and timely delivery, allowing you to stay ahead in the fast-evolving blockchain landscape. Whether you need a complex decentralized finance (DeFi) platform, a unique NFT marketplace, or any other innovative dApp solution, our team is dedicated to turning your blockchain vision into reality.
+button: 
+  label: "Learn More"
+  link: "#"
+image: "images/spotlight02.jpg"

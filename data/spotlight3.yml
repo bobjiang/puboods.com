@@ -1,0 +1,10 @@
+####################### Spotlight #########################
+style: "style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+id: "first"
+title : "Artificial Intelligence (AI)"
+content: |
+  Our AI development service is dedicated to transforming your business with intelligent solutions that drive innovation and efficiency. Our team of experts employs a meticulous, data-driven approach, ensuring the development of AI systems that are accurate, reliable, and scalable. Let us help you unlock the full potential of artificial intelligence for your business.
+button: 
+  label: "Learn More"
+  link: "#"
+image: "images/spotlight03.jpg"

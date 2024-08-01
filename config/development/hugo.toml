@@ -1,0 +1,49 @@
+## -----------------------------------------------
+## Basic Configuration
+## -----------------------------------------------
+
+title = "Puboods"
+copyright = "{year}"
+
+## -----------------------------------------------
+## Publish
+## -----------------------------------------------
+
+relativeURLs = "true"
+#canonifyURLs = "true"
+
+# Local
+baseURL = "/"
+publishDir = "public"
+
+# Remote
+#baseURL = "https://caressofsteel.github.io/demos/hugo/hugo-story/"
+#publishDir = "//centos/sites/hugodev/hugostory/"
+
+## -----------------------------------------------
+## Hugo Built-in Features
+## -----------------------------------------------
+
+disableKinds = ["taxonomy", "section"]
+# googleAnalytics = "G-XXXXXXXXXX"
+
+## -----------------------------------------------
+## Site Parameters
+## -----------------------------------------------
+
+[Params]
+  description = "Our comprehensive software development services are designed to bring your vision to life with precision and innovation. Our expertise extends to Ethereum and Solana dApp development, where we build secure and efficient decentralized applications that redefine what's possible in the blockchain space. Additionally, our AI development services harness the power of artificial intelligence to create intelligent systems that enhance productivity and decision-making. Complementing these offerings, our technology consulting services provide strategic guidance to help you navigate the ever-evolving tech landscape, ensuring your projects are not only successful but also future-proof. "
+  logo = "images/banner.jpg"
+  favicon = true
+
+[Params.social]
+  github = "https://github.com/bobjiang/puboods.com"
+#  twitter = ""
+  email = "hi@puboods.com"
+#  instagram = "https://instagram.com"
+#  linkedin = "https://linkedin.com"
+#  telegram = "https://telegram.org"
+
+[Params.asset]
+  fontawesome_css = ["css/fontawesome-all.min.css"]
+  fontawesome_js = ["js/fontawesome-all.min.js"]
