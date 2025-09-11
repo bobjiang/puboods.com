@@ -1,10 +1,16 @@
 ####################### Spotlight #########################
 style: "style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
 id: "first"
-title : "Software Development"
+title : "Why Choose Us"
 content: |
-  Our software development service excels in delivering high-quality, custom applications through an agile/Scrum development approach. We prioritize timely delivery, ensuring your projects stay on schedule without compromising on quality. Our team’s commitment to flexibility and collaboration ensures that your software is not only robust and scalable but also precisely aligned with your vision and business goals. Trust us to bring innovation, efficiency, and reliability to every project we undertake.
+  **Faster MVP Delivery** – Launch your product in weeks, not months with our streamlined development process.
+  
+  **Flexible Engagement Models** – Choose from fixed-price projects or dedicated teams that scale with your needs.
+  
+  **Trusted Expertise** – Experienced developers across web, mobile, AI, and cloud technologies.
+  
+  **Clear Communication** – We work in your time zone, with your tools, ensuring seamless collaboration.
 button: 
-  label: "Learn More"
-  link: "#"
+  label: "Schedule a Call"
+  link: "https://calendly.com/bobjiang"
 image: "images/spotlight01.jpg"

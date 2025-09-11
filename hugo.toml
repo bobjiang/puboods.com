@@ -34,3 +34,6 @@ disableKinds = ["taxonomy", "section"]
 [Params]
 
 [Params.social]
+email = "hi@puboods.com"
+linkedin = "https://linkedin.com/company/puboods"
+github = "https://github.com/puboods"

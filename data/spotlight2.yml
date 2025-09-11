@@ -1,9 +1,18 @@
 ####################### Spotlight #########################
 style: "style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
-title : "Blockchain dApp Development"
+title : "Our Services at a Glance"
 content: |
-  Our dApp development service specializes in creating decentralized applications on Ethereum and Solana, designed to revolutionize your business with cutting-edge blockchain technology. Our agile development process ensures rapid iteration and timely delivery, allowing you to stay ahead in the fast-evolving blockchain landscape. Whether you need a complex decentralized finance (DeFi) platform, a unique NFT marketplace, or any other innovative dApp solution, our team is dedicated to turning your blockchain vision into reality.
+  From MVPs to enterprise-scale platforms, we cover the full spectrum of software development.
+  
+  • **Custom Web & Mobile Development** – Scalable applications built with modern technologies
+  • **MVP Development for Startups** – Fast-track your product to market
+  • **Cloud Solutions** – AWS, Azure, GCP deployment and management
+  • **AI & Machine Learning Applications** – Intelligent systems and AI agents
+  • **Ethereum DApp Development** – Secure blockchain applications
+  • **UI/UX Design** – User-centered design that converts
+  • **Quality Assurance & Testing** – Comprehensive testing strategies
+  • **Staff Augmentation & Dedicated Teams** – Scale your development capacity
 button: 
-  label: "Learn More"
-  link: "#"
+  label: "Request a Quote"
+  link: "https://calendly.com/bobjiang"
 image: "images/spotlight02.jpg"
