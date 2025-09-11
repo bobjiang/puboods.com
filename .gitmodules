@@ -1,3 +1,6 @@
 [submodule "themes/hugo-story"]
 	path = themes/hugo-story
 	url = git@github.com:caressofsteel/hugo-story.git
+[submodule "themes/long-teng"]
+	path = themes/long-teng
+	url = https://github.com/MDFriday/theme-long-teng.git

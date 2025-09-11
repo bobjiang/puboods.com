@@ -2,7 +2,7 @@
 ## Basic Configuration
 ## -----------------------------------------------
 
-theme = "hugo-story"
+# theme = "long-teng"
 
 ## -----------------------------------------------
 ## Publish
@@ -31,7 +31,9 @@ disableKinds = ["taxonomy", "section"]
 ## Site Parameters
 ## -----------------------------------------------
 
-[Params]
+[module]
+    [[module.imports]]
+        path = "github.com/mdfriday/theme-long-teng"
 
-[Params.social]
-email = "hi@puboods.com"
+[params]
+Author = 'Puboods Pty Ltd'

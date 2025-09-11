@@ -1,3 +1,4 @@
 baseURL = 'https://puboods.com/'
-languageCode = 'en-us'
-title = 'Puboods'
+defaultLanguage = "en"
+title = 'Puboods - Software Outsourcing Partner'
+description = "Trusted software outsourcing partner for startups and growing businesses. We specialize in AI agents, Ethereum DApp development, and custom software solutions."

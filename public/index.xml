@@ -1,12 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Puboods</title>
+    <title>Puboods - Software Outsourcing Partner on Puboods</title>
     <link>/</link>
-    <description>Recent content on Puboods</description>
+    <description>Recent content in Puboods - Software Outsourcing Partner on Puboods</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>{year}</copyright>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/footer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/footer/</guid>
+      <description>&lt;h1 id=&#34;footer-configuration&#34;&gt;Footer Configuration&lt;/h1&gt;&#xA;&lt;p&gt;This footer provides additional navigation and contact information for potential clients to connect with Puboods for their software development needs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Navigation Configuration</title>
+      <link>/nav/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/nav/</guid>
+      <description>&lt;h1 id=&#34;navigation-configuration&#34;&gt;Navigation Configuration&lt;/h1&gt;&#xA;&lt;p&gt;This file configures the navigation bar for the Puboods website, including logo, menu links, and call-to-action buttons.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Our Services at a Glance</title>
+      <link>/how-to/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/how-to/</guid>
+      <description>&lt;h1 id=&#34;how-we-work&#34;&gt;How We Work&lt;/h1&gt;&#xA;&lt;p&gt;From MVPs to enterprise-scale platforms, we cover the full spectrum of software development:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Custom Web &amp;amp; Mobile Development&lt;/strong&gt; – Scalable applications built with modern technologies&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;MVP Development for Startups&lt;/strong&gt; – Fast-track your product to market&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cloud Solutions&lt;/strong&gt; – AWS, Azure, GCP deployment and management&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;AI &amp;amp; Machine Learning Applications&lt;/strong&gt; – Intelligent systems and AI agents&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ethereum DApp Development&lt;/strong&gt; – Secure blockchain applications&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;UI/UX Design&lt;/strong&gt; – User-centered design that converts&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Quality Assurance &amp;amp; Testing&lt;/strong&gt; – Comprehensive testing strategies&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Staff Augmentation &amp;amp; Dedicated Teams&lt;/strong&gt; – Scale your development capacity&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Puboods: Build World-Class Software with a Trusted Outsourcing Partner</title>
+      <link>/product/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/product/</guid>
+      <description>&lt;h1 id=&#34;product-introduction&#34;&gt;Product Introduction&lt;/h1&gt;&#xA;&lt;p&gt;This section introduces Puboods as a trusted software outsourcing partner, highlighting our key value propositions and encouraging potential clients to schedule a consultation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Puboods: Trusted by Growing Businesses</title>
+      <link>/user-trust/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/user-trust/</guid>
+      <description>&lt;h1 id=&#34;user-trust-and-impact&#34;&gt;User Trust and Impact&lt;/h1&gt;&#xA;&lt;p&gt;This section builds credibility by showcasing our track record of successful project deliveries across key industries.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
