@@ -8,7 +8,8 @@
       "WebFetch(domain:themes.gohugo.io)",
       "WebFetch(domain:github.com)",
       "Bash(git submodule add:*)",
-      "Bash(git submodule:*)"
+      "Bash(git submodule:*)",
+      "Bash(rsvg-convert:*)"
     ],
     "deny": [],
     "ask": []
