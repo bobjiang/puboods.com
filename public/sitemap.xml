@@ -4,6 +4,10 @@
   <url>
     <loc>/footer/</loc>
   </url><url>
+    <loc>/authors/</loc>
+  </url><url>
+    <loc>/categories/</loc>
+  </url><url>
     <loc>/industries/</loc>
   </url><url>
     <loc>/nav/</loc>
@@ -17,5 +21,7 @@
     <loc>/product/</loc>
   </url><url>
     <loc>/user-trust/</loc>
+  </url><url>
+    <loc>/tags/</loc>
   </url>
 </urlset>
