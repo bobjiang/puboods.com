@@ -1,80 +1,110 @@
++++
+title = "Our Services - End-to-End Software Development"
+description = "From idea to deployment. Comprehensive software development services including web, mobile, AI, blockchain, and cloud solutions."
++++
+
+# End-to-End Development Services
+
+**From an idea to deployment** — We build scalable, production-ready applications using cutting-edge technologies.
+
 ---
-title: "Our Services - Software Development Solutions"
-description: "Comprehensive software development services including custom web & mobile development, AI solutions, blockchain DApps, cloud services, and dedicated teams."
-layout: "services"
+
+## 🌐 Web Development
+**React • Next.js • Vue.js • Node.js**
+
+Modern web applications that scale with your business:
+- Single Page Applications (SPAs) with seamless user experience
+- Progressive Web Apps (PWAs) for mobile-first performance  
+- E-commerce platforms with payment integration
+- Enterprise dashboards and admin panels
+
+## 📱 Mobile Development
+**React Native • Flutter • iOS • Android**
+
+Cross-platform mobile apps that reach every user:
+- Native iOS and Android applications
+- Hybrid apps with shared codebase
+- Mobile-first design and user experience
+- App Store optimization and deployment
+
+## 🤖 AI & Machine Learning
+**Python • TensorFlow • OpenAI • Computer Vision**
+
+Intelligent systems that automate and optimize:
+- AI chatbots and virtual assistants
+- Predictive analytics and data insights
+- Computer vision and image processing
+- Natural Language Processing (NLP) solutions
+
+## ⛓️ Blockchain & DeFi
+**Solidity • Ethereum • Web3 • Smart Contracts**
+
+Decentralized applications for the future of finance:
+- DeFi protocols and yield farming platforms
+- NFT marketplaces and token systems
+- Smart contract development and auditing
+- Web3 wallet integration and dApp connectivity
+
 ---
 
-# Our Services
+# Cutting-Edge Technologies
 
-From MVPs to enterprise-scale platforms, we cover the full spectrum of software development with transparent processes and agile delivery.
+## ☁️ Cloud & DevOps
+**AWS • Azure • GCP • Docker • Kubernetes**
 
-## Custom Web & Mobile Development
-Build scalable applications with modern technologies. Our team specializes in:
-- **React & Next.js** for dynamic web applications
-- **React Native & Flutter** for cross-platform mobile apps
-- **Node.js & Python** for robust backend systems
-- **Progressive Web Apps (PWAs)** for enhanced user experiences
+Scalable infrastructure that grows with you:
+- Microservices architecture and containerization
+- CI/CD pipelines for automated deployment
+- Cloud migration and optimization
+- Monitoring and performance analytics
 
-## MVP Development for Startups
-Fast-track your product to market with our streamlined MVP development process:
-- **Rapid prototyping** in 2-4 weeks
-- **User validation** and feedback integration
-- **Scalable architecture** for future growth
-- **Agile methodology** with weekly updates
+## ⚡ MVP Development
+**Agile • 2-4 Week Sprints • User Testing**
 
-## Cloud Solutions
-Deploy and scale with confidence using leading cloud platforms:
-- **AWS, Azure, GCP** deployment and management
-- **Microservices architecture** for scalability
-- **DevOps and CI/CD** pipeline setup
-- **Cloud migration** and optimization
+Fast-track your product to market:
+- Rapid prototyping and user validation
+- Iterative development with weekly demos
+- Market-ready MVP in 4-8 weeks
+- Post-launch scaling and feature expansion
 
-## AI & Machine Learning Applications
-Harness the power of artificial intelligence:
-- **AI Agents** for automation and customer service
-- **Machine Learning models** for data insights
-- **Natural Language Processing** for content analysis
-- **Computer Vision** for image and video processing
+## 🎨 UI/UX Design
+**Figma • User Research • Responsive Design**
 
-## Ethereum DApp Development
-Secure blockchain applications on Ethereum:
-- **Smart contract** development and auditing
-- **DeFi protocols** and yield farming platforms
-- **NFT marketplaces** and token systems
-- **Web3 integration** with wallet connectivity
-
-## UI/UX Design
 User-centered design that converts:
-- **User research** and persona development
-- **Wireframing and prototyping** with Figma
-- **Responsive design** for all devices
-- **Accessibility compliance** (WCAG 2.1)
+- User journey mapping and wireframing
+- Interactive prototypes and user testing
+- Mobile-first responsive design
+- Accessibility compliance (WCAG 2.1)
 
-## Quality Assurance & Testing
-Comprehensive testing strategies:
-- **Automated testing** with Jest, Cypress, Selenium
-- **Performance testing** and optimization
-- **Security audits** and penetration testing
-- **Manual testing** and user acceptance testing
+## 🛡️ Quality Assurance
+**Automated Testing • Security • Performance**
 
-## Staff Augmentation & Dedicated Teams
-Scale your development capacity:
-- **Dedicated developers** integrated with your team
-- **Project-based teams** for specific initiatives
-- **Technical leadership** and architecture guidance
-- **Flexible engagement models** (fixed-price, time & material)
+Production-ready code that you can trust:
+- Test-driven development (TDD)
+- Automated testing suites and CI integration
+- Security audits and penetration testing
+- Performance optimization and load testing
 
 ---
 
-## Why Choose Our Services?
+## Why Choose Puboods?
 
-**✓ Faster MVP Delivery** – Launch in weeks, not months  
-**✓ Transparent Processes** – Regular updates and clear communication  
-**✓ Certified Scrum Experts** – Agile delivery you can trust  
-**✓ Flexible Engagement** – Choose what works for your business  
+**⚡ Faster Time-to-Market**  
+Launch in weeks, not months with our agile approach
 
-## Ready to Start Your Project?
+**🔍 Transparent Process**  
+Weekly demos, clear communication, no surprises
 
-Our team is ready to turn your ideas into scalable, high-quality digital products.
+**🏆 Proven Expertise**  
+50+ successful projects across multiple industries
 
-**[Schedule a Free Consultation](https://calendly.com/bobjiang)** or **[Email Us](mailto:hi@puboods.com)**
+**🔧 Flexible Engagement**  
+Fixed-price, hourly, or dedicated team models
+
+---
+
+## Ready to Build Something Amazing?
+
+Transform your ideas into production-ready applications.
+
+**[Get Free Project Estimate](https://calendly.com/bobjiang)** • **[Email Us](mailto:hi@puboods.com)**
