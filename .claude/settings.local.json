@@ -11,7 +11,9 @@
       "Bash(git submodule:*)",
       "Bash(rsvg-convert:*)",
       "WebFetch(domain:fortunaglobal.com.au)",
-      "Bash(git restore:*)"
+      "Bash(git restore:*)",
+      "Bash(cat:*)",
+      "Bash(git rm:*)"
     ],
     "deny": [],
     "ask": []
