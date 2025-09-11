@@ -1,0 +1,23 @@
+{{ define "main" }}
+<main class="main-wrapper">
+    <div class="page-padding">
+        <div class="container-large">
+            <div class="padding-vertical padding-xlarge">
+                <div class="container-small">
+                    <div class="text-align-center">
+                        <h1 class="heading-huge text-color-base-dark">{{ .Title }}</h1>
+                        {{ if .Description }}
+                        <div class="spacer-small"></div>
+                        <p class="paragraph-large text-color-grey-600">{{ .Description }}</p>
+                        {{ end }}
+                        <div class="spacer-large"></div>
+                    </div>
+                    <div class="rich-text w-richtext text-color-base-dark">
+                        {{ .Content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{{ end }}

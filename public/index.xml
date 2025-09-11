@@ -16,11 +16,25 @@
       <description>&lt;h1 id=&#34;footer-configuration&#34;&gt;Footer Configuration&lt;/h1&gt;&#xA;&lt;p&gt;This footer provides additional navigation and contact information for potential clients to connect with Puboods for their software development needs.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Industries We Serve - Specialized Software Solutions</title>
+      <link>/industries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/industries/</guid>
+      <description>&lt;h1 id=&#34;industries-we-serve&#34;&gt;Industries We Serve&lt;/h1&gt;&#xA;&lt;p&gt;We specialize in delivering solutions across key industries where technology drives innovation, with deep understanding of compliance requirements and industry-specific challenges.&lt;/p&gt;&#xA;&lt;h2 id=&#34;fintech&#34;&gt;FinTech&lt;/h2&gt;&#xA;&lt;p&gt;Transform financial services with secure, scalable, and compliant solutions:&lt;/p&gt;&#xA;&lt;h3 id=&#34;payment-platforms&#34;&gt;&lt;strong&gt;Payment Platforms&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Digital wallets&lt;/strong&gt; and payment processing&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Multi-currency support&lt;/strong&gt; and real-time exchanges&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Fraud detection&lt;/strong&gt; and risk management systems&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;PCI-DSS compliance&lt;/strong&gt; and security frameworks&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;trading-systems&#34;&gt;&lt;strong&gt;Trading Systems&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;High-frequency trading&lt;/strong&gt; platforms&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Portfolio management&lt;/strong&gt; and analytics dashboards&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Real-time market data&lt;/strong&gt; integration&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Algorithmic trading&lt;/strong&gt; and backtesting tools&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;regulatory-compliance&#34;&gt;&lt;strong&gt;Regulatory Compliance&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;KYC/AML&lt;/strong&gt; automated verification systems&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GDPR compliance&lt;/strong&gt; and data protection&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Financial reporting&lt;/strong&gt; and audit trails&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Open Banking&lt;/strong&gt; API integrations&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;ai--machine-learning&#34;&gt;AI &amp;amp; Machine Learning&lt;/h2&gt;&#xA;&lt;p&gt;Intelligent systems that enhance productivity and decision-making:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Navigation Configuration</title>
       <link>/nav/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/nav/</guid>
       <description>&lt;h1 id=&#34;navigation-configuration&#34;&gt;Navigation Configuration&lt;/h1&gt;&#xA;&lt;p&gt;This file configures the navigation bar for the Puboods website, including logo, menu links, and call-to-action buttons.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Our Services - Software Development Solutions</title>
+      <link>/services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/services/</guid>
+      <description>&lt;h1 id=&#34;our-services&#34;&gt;Our Services&lt;/h1&gt;&#xA;&lt;p&gt;From MVPs to enterprise-scale platforms, we cover the full spectrum of software development with transparent processes and agile delivery.&lt;/p&gt;&#xA;&lt;h2 id=&#34;custom-web--mobile-development&#34;&gt;Custom Web &amp;amp; Mobile Development&lt;/h2&gt;&#xA;&lt;p&gt;Build scalable applications with modern technologies. Our team specializes in:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;React &amp;amp; Next.js&lt;/strong&gt; for dynamic web applications&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;React Native &amp;amp; Flutter&lt;/strong&gt; for cross-platform mobile apps&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Node.js &amp;amp; Python&lt;/strong&gt; for robust backend systems&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Progressive Web Apps (PWAs)&lt;/strong&gt; for enhanced user experiences&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;mvp-development-for-startups&#34;&gt;MVP Development for Startups&lt;/h2&gt;&#xA;&lt;p&gt;Fast-track your product to market with our streamlined MVP development process:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Our Services at a Glance</title>
