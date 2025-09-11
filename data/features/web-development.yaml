@@ -1,0 +1,5 @@
+weight: 1
+name: "Custom Web & Mobile Development"
+icon: "fas fa-laptop-code"
+url: "/services/#web-development"
+description: "Scalable applications with React, Next.js, React Native & Flutter for modern user experiences."

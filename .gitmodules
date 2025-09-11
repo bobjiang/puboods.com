@@ -4,3 +4,9 @@
 [submodule "themes/long-teng"]
 	path = themes/long-teng
 	url = https://github.com/MDFriday/theme-long-teng.git
+[submodule "themes/hugo-universal-theme"]
+	path = themes/hugo-universal-theme
+	url = https://github.com/devcows/hugo-universal-theme.git
+[submodule "themes/themes/hugo-universal-theme"]
+	path = themes/themes/hugo-universal-theme
+	url = https://github.com/devcows/hugo-universal-theme.git

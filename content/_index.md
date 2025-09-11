@@ -1,9 +1,8 @@
 ---
-title: "Puboods - Software Outsourcing Partner"
+title: "Puboods - Software Development & Outsourcing"
+description: "Build Better Software. Faster. Professional software development services including web apps, mobile development, AI solutions, and blockchain applications."
 ---
 
-# Puboods Homepage
+# Build Better Software. Faster.
 
-This is the homepage for Puboods, a trusted software outsourcing partner that helps startups and growing businesses turn ideas into scalable, high-quality digital products.
-
-We specialize in AI agents, Ethereum DApp development, and custom software solutions delivered with transparent processes and agile methodologies.
+Your trusted partner for professional software development and outsourcing services.

@@ -1,0 +1,5 @@
+weight: 4
+name: "Cloud Solutions"
+icon: "fas fa-cloud"
+url: "/services/#cloud"
+description: "Deploy and scale with AWS, Azure, GCP using microservices and DevOps best practices."

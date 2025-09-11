@@ -1,39 +1,136 @@
-## -----------------------------------------------
-## Basic Configuration
-## -----------------------------------------------
-
-# theme = "long-teng"
-
-## -----------------------------------------------
-## Publish
-## -----------------------------------------------
-
-relativeURLs = "true"
-#canonifyURLs = "true"
-
-# Local
 baseURL = "/"
-publishDir = "public"
+title = "Puboods - Software Development & Outsourcing"
+theme = "hugo-universal-theme"
+languageCode = "en-us"
+defaultContentLanguage = "en"
 
-# Remote
-#baseURL = "https://caressofsteel.github.io/demos/hugo/hugo-story/"
-#publishDir = "//centos/sites/hugodev/hugostory/"
+# Number of words of summarized post content (default 70)
+summaryLength = 70
 
+# Not pluralize title pages by default
+pluralizelisttitles = false
 
-## -----------------------------------------------
-## Hugo Built-in Features
-## -----------------------------------------------
+# Define the number of posts per page
+[pagination]
+    pagerSize = 10
 
-disableKinds = ["taxonomy", "section"]
-# googleAnalytics = "your-google-analytics-id"
+# Main menu
+[menu]
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
 
-## -----------------------------------------------
-## Site Parameters
-## -----------------------------------------------
+[[menu.main]]
+    name = "Services"
+    url = "/services/"
+    weight = 2
 
-[module]
-    [[module.imports]]
-        path = "github.com/mdfriday/theme-long-teng"
+[[menu.main]]
+    name = "Industries"
+    url = "/industries/"
+    weight = 3
+
+[[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+# Top bar social links menu
+[[menu.topbar]]
+    weight = 1
+    name = "Phone"
+    url = "tel:+61 2 1234 5678"
+    pre = "<i class='fas fa-2x fa-phone'></i>"
+
+[[menu.topbar]]
+    weight = 2
+    name = "Email"
+    url = "mailto:hi@puboods.com"
+    pre = "<i class='fas fa-2x fa-envelope'></i>"
 
 [params]
-Author = 'Puboods Pty Ltd'
+    author = "Puboods Pty Ltd"
+    defaultKeywords = ["software development", "outsourcing", "web development", "mobile apps"]
+    defaultDescription = "Professional software development and outsourcing services - Build Better Software. Faster."
+
+    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
+    style = "blue"
+
+    # Contact form settings
+    formspree_action = "https://formspree.io/f/YOUR_FORM_ID"
+    contact_form_ajax = false
+
+    about_us = "<p>Puboods is a leading software development company specializing in custom web and mobile applications, AI solutions, and blockchain development.</p>"
+    copyright = "Copyright (c) 2024, Puboods Pty Ltd; all rights reserved."
+
+    # Format dates with Go's time formatting
+    date_format = "January 2, 2006"
+
+    dropdown_mouse_over = false
+
+    disabled_logo = false
+    logo_text = "Puboods"
+    logo = "img/logo.svg"
+    logo_small = "img/logo.svg"
+    contact_url = "/contact"
+    
+    address = """<p class="text-uppercase"><strong>Puboods Pty Ltd</strong>
+        <br>Software Development Services
+        <br>Australia
+        <br>
+        <strong>Email: hi@puboods.com</strong>
+      </p>
+      """
+
+# Enable or disable top bar with social icons
+[params.topbar]
+    enable = true
+    text = """<p class="hidden-sm hidden-xs">Contact us at hi@puboods.com for your software development needs.</p>
+      <p class="hidden-md hidden-lg"><a href="tel:+61212345678" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
+      <a href="mailto:hi@puboods.com" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
+      </p>
+      """
+
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+    categories = true
+    tags = true
+    search = true
+
+[params.carouselHomepage]
+    enable = true
+    auto_play = true
+    slide_speed = 2000
+    pagination_speed = 1000
+
+[params.features]
+    enable = true
+    cols = 3
+    
+[params.testimonials]
+    enable = true
+    title = "Client Success Stories"
+    subtitle = "See what our clients say about working with Puboods for their software development needs."
+
+[params.see_more]
+    enable = true
+    icon = "far fa-file-alt"
+    title = "Ready to Start Your Project?"
+    subtitle = "Transform your ideas into powerful software solutions with our expert team."
+    link_url = "https://calendly.com/bobjiang"
+    link_text = "Schedule Free Consultation"
+
+[params.clients]
+    enable = false
+
+[params.recent_posts]
+    enable = false
+
+[params.footer.recent_posts]
+    enable = false
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    author = "authors"
