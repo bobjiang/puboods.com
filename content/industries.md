@@ -1,7 +1,7 @@
 ---
 title: "Industries We Serve - Specialized Software Solutions"
 description: "Expert software development for FinTech, AI & Machine Learning, Ethereum DApp, and eCommerce industries with deep knowledge of compliance and best practices."
-layout: "single"
+layout: "industries"
 ---
 
 # Industries We Serve

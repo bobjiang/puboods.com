@@ -1,181 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Puboods</title>
-
-    <link href="../css/clean.css" rel="stylesheet" type="text/css">
-    <link href="../img/fav.png" rel="shortcut icon" type="image/x-icon">
-    <link href="../services/" rel="canonical">
-
-</head>
-<body>
-<div class="page-wrapper">
-
-    
-
-<nav id="nav" class="navbar">
-    <div class="navbar_container">
-        <div class="z-9999 flex-child-fixed" style="margin-top: -5px;">
-            <div class="navbar_logo-dark">
-                <a href="../" aria-current="page" class="logo-medium w-inline-block">
-                    <div class="logo-wrapper">
-                        <img width="auto" alt="Puboods Logo" src="../img/logo.svg" loading="eager" class="height-inherit">
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="navbar_content-wrapper">
-            <div class="navbar_menu-items-wrapper">
-                
-                
-                
-                
-                
-                
-
-                <div class="navbar_dropdown-element-wrapper">
-                    
-                    <a href="../services" class="navbar_dropdown-toggle w-inline-block" target="_blank">
-                        <div class="paragraph-medium" title="Services">Services</div>
-                    </a>
-                    
-                </div>
-                
-                
-                
-                
-                
-                
-                
-
-                <div class="navbar_dropdown-element-wrapper">
-                    
-                    <a href="../industries" class="navbar_dropdown-toggle w-inline-block" target="_blank">
-                        <div class="paragraph-medium" title="Industries">Industries</div>
-                    </a>
-                    
-                </div>
-                
-                
-
-                <div class="navbar_bg-overlay"></div>
-            </div>
-            <div class="navbar_cta-container">
-
-                
-                
-                
-                
-                
-                
-
-                
-
-                <div class="navbar_hide-desktop-custom">
-                    <div class="navbar_dropdown-element-wrapper">
-                        
-                            <a href="mailto:hi@puboods.com" class="navbar_dropdown-toggle w-inline-block" target="_blank">
-                                
-                                <div class="paragraph-medium" title="Contact Us">Contact Us</div>
-                            </a>
-                    </div>
-                </div>
-
-                <div class="navbar_hide-desktop-custom">
-                    <div class="height-1-25rem">
-                        <div color="" vertical="true" class="divider"></div>
-                    </div>
-                </div>
-                
-
-
-                
-                
-                
-                
-                
-
-                
-                
-                
-
-                <div class="buttonwrapper is-navbar">
-                    
-                        
-                            <a href="https://calendly.com/bobjiang" button="" show-tablet="true"
-                               class="button-secondary is-small is-stretched w-inline-block" target="_blank">
-                                
-                                <div title="Schedule a Call">Schedule a Call</div>
-                            </a>
-                            
-
-                </div>
-                
-                
-                
-                
-                
-
-                
-
-                <div class="buttonwrapper is-navbar">
-                    
-                        
-                            <a href="mailto:hi@puboods.com" button="" show-tablet="true"
-                               class="button-secondary is-small is-stretched w-inline-block" target="_blank">
-                                
-                                <div title="Contact Us">Contact Us</div>
-                            </a>
-                            
-
-                </div>
-                
-
-
-            </div>
-        </div>
-
-        <div class="show-tablet">
-            <div class="z-9999">
-                <div class="flex flex-centre-align flex-gap-1-5rem">
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    
-                    
-
-                    
-                    
-
-                    <div class="navbar_burger-icon-wrapper">
-                        <div class="navbar_burger-menu-stroke"></div>
-                        <div class="navbar_burger-menu-stroke"></div>
-                        <div class="navbar_burger-menu-stroke"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</nav>
-
-    
+{{ define "main" }}
 <main class="main-wrapper">
-    
+    <!-- Hero Section -->
     <header class="position-relative" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 60vh;">
         <div class="page-padding">
             <div class="container-large">
                 <div class="padding-vertical padding-xxxlarge text-align-center">
                     <div class="container-small">
-                        <h1 class="heading-huge text-color-white">Our Services - Software Development Solutions</h1>
+                        <h1 class="heading-huge text-color-white">{{ .Title }}</h1>
                         <div class="spacer-medium"></div>
-                        <p class="paragraph-xlarge text-color-white opacity-90">Comprehensive software development services including custom web &amp; mobile development, AI solutions, blockchain DApps, cloud services, and dedicated teams.</p>
+                        <p class="paragraph-xlarge text-color-white opacity-90">{{ .Description }}</p>
                         <div class="spacer-large"></div>
                         <div class="buttonwrapper center-button">
                             <a href="https://calendly.com/bobjiang" class="button is-large w-inline-block">
@@ -188,7 +21,7 @@
         </div>
     </header>
 
-    
+    <!-- Services Grid -->
     <section class="padding-vertical padding-xxxlarge">
         <div class="page-padding">
             <div class="container-large">
@@ -198,9 +31,9 @@
                     <p class="paragraph-large text-color-grey-600">From MVP to enterprise-scale platforms, we deliver with transparency and agile processes</p>
                 </div>
 
-                
+                <!-- Service Cards Grid -->
                 <div class="grid-3col gap-large is-2col-tablet is-1col-mobile">
-                    
+                    <!-- Custom Web & Mobile Development -->
                     <div class="service-card padding-large border-radius-large background-white" style="box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
                         <div class="service-icon margin-bottom margin-medium">
                             <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
@@ -216,7 +49,7 @@
                         </ul>
                     </div>
 
-                    
+                    <!-- MVP Development -->
                     <div class="service-card padding-large border-radius-large background-white" style="box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
                         <div class="service-icon margin-bottom margin-medium">
                             <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
@@ -232,7 +65,7 @@
                         </ul>
                     </div>
 
-                    
+                    <!-- Cloud Solutions -->
                     <div class="service-card padding-large border-radius-large background-white" style="box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
                         <div class="service-icon margin-bottom margin-medium">
                             <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
@@ -248,7 +81,7 @@
                         </ul>
                     </div>
 
-                    
+                    <!-- AI & ML -->
                     <div class="service-card padding-large border-radius-large background-white" style="box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
                         <div class="service-icon margin-bottom margin-medium">
                             <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #a8edea, #fed6e3); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
@@ -264,7 +97,7 @@
                         </ul>
                     </div>
 
-                    
+                    <!-- Blockchain -->
                     <div class="service-card padding-large border-radius-large background-white" style="box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
                         <div class="service-icon margin-bottom margin-medium">
                             <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #fbc2eb, #a6c1ee); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
@@ -280,7 +113,7 @@
                         </ul>
                     </div>
 
-                    
+                    <!-- UI/UX Design -->
                     <div class="service-card padding-large border-radius-large background-white" style="box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
                         <div class="service-icon margin-bottom margin-medium">
                             <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #fdbb2d, #22c1c3); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
@@ -300,7 +133,7 @@
         </div>
     </section>
 
-    
+    <!-- Why Choose Us Section -->
     <section class="padding-vertical padding-xxxlarge" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
         <div class="page-padding">
             <div class="container-large">
@@ -349,7 +182,7 @@
         </div>
     </section>
 
-    
+    <!-- CTA Section -->
     <section class="padding-vertical padding-xxxlarge">
         <div class="page-padding">
             <div class="container-large">
@@ -370,305 +203,4 @@
         </div>
     </section>
 </main>
-
-    
-
-<footer id="footer" class="footer-section">
-    <div class="page-padding">
-        <div class="container-large">
-            <div class="grid-12col-base row-gap-0rem is-align-top">
-                <div id="w-node-_5834ca98-ddcd-32c3-f6d6-9632f459ad4e-d671f29a" class="show-tablet">
-                    <div class="padding-vertical padding-xxxlarge is-fixed">
-                        <div class="opacity-20">
-                            <div color="" vertical="false" class="divider"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="w-node-_5834ca98-ddcd-32c3-f6d6-9632f459ad51-d671f29a"
-                     class="flex-vertical-left flex-gap-1-5rem is-center-tablet"><a
-                        href="../" aria-current="page" class="logo-medium w-inline-block">
-                    <div class="synthesia-logo-wrapper">
-                        <img style="width: 128px;" src="../img/logo.svg" alt="" class="height-inherit"></div>
-                </a>
-
-                    <div class="max-width-37rem">
-                        <div class="text-align-left is-center-tablet">
-                            <p class="paragraph-small">
-                                Puboods helps startups and growing businesses build world-class software through trusted outsourcing partnerships. We specialize in AI agents, Ethereum DApp development, and custom software solutions with transparent processes and agile delivery.
-
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex-child-stretch">
-                        <div class="opacity-20">
-                            <div color="" vertical="false" class="divider"></div>
-                        </div>
-                    </div>
-                    <p class="label-regular text-align-center-tablet">Australia</p>
-                </div>
-
-                 
-                 
-
-                
-                
-                  
-                  
-
-                
-                
-                
-                
-
-                
-                  
-                  
-
-                
-                
-                
-                  
-                  
-                  
-                
-
-                
-                  
-                  
-
-                
-                
-                
-                  
-                  
-                  
-                
-
-                
-                  
-                  
-
-                
-                
-                
-                
-
-                
-                  
-                  
-
-                
-                
-                
-                  
-                  
-                  
-                
-
-                
-                  
-                  
-
-                
-                
-                
-                  
-                  
-                  
-                
-
-                
-                  
-                  
-
-                
-                
-                
-                
-
-                
-                  
-                  
-
-                
-                
-                
-                  
-                  
-                  
-                
-
-                
-
-                
-                 
-                 
-                 
-                 
-
-                
-                
-                
-                <div class="flex-vertical flex-gap-075rem" style="grid-area: 1/9/2/11;">
-                    <div class="text-color-indigo-400">
-                        <div class="paragraph-medium is-medium">Contact</div>
-                    </div>
-
-                
-                
-
-                 
-                 
-                 
-                 
-
-                    
-                    <a href="https://calendly.com/bobjiang" target="_blank" class="paragraph-small">Schedule Call</a>
-                    
-
-                
-
-                 
-                 
-                 
-                 
-
-                    
-                    <a href="mailto:hi@puboods.com" target="_blank" class="paragraph-small">Email Us</a>
-                    
-
-                
-
-                </div>
-
-                
-                
-                
-
-                
-                
-                <div class="flex-vertical flex-gap-075rem" style="grid-area: 1/11/2/13;">
-                    <div class="text-color-indigo-400">
-                        <div class="paragraph-medium is-medium">Industries</div>
-                    </div>
-
-                
-                
-
-                 
-                 
-                 
-                 
-
-                    
-                    <a href="../industries#ecommerce" target="_blank" class="paragraph-small">eCommerce</a>
-                    
-
-                
-
-                 
-                 
-                 
-                 
-
-                    
-                    <a href="../industries#fintech" target="_blank" class="paragraph-small">FinTech</a>
-                    
-
-                
-
-                 
-                 
-                 
-                 
-
-                    
-                    <a href="../industries" target="_blank" class="paragraph-small">All Industries</a>
-                    
-
-                
-
-                </div>
-
-                
-                
-                
-
-                
-                
-                <div class="flex-vertical flex-gap-075rem" style="grid-area: 1/13/2/15;">
-                    <div class="text-color-indigo-400">
-                        <div class="paragraph-medium is-medium">Services</div>
-                    </div>
-
-                
-                
-
-                 
-                 
-                 
-                 
-
-                    
-                    <a href="../services#ethereum-dapp-development" target="_blank" class="paragraph-small">Blockchain DApps</a>
-                    
-
-                
-
-                 
-                 
-                 
-                 
-
-                    
-                    <a href="../services#ai--machine-learning-applications" target="_blank" class="paragraph-small">AI &amp; ML Solutions</a>
-                    
-
-                
-
-                 
-                 
-                 
-                 
-
-                    
-                    <a href="../services" target="_blank" class="paragraph-small">All Services</a>
-                    
-
-                
-
-                </div>
-
-                
-                
-                
-
-                
-
-            </div>
-            <div class="hide-tablet">
-                <div class="padding-top padding-xxlarge">
-                    <div class="padding-bottom padding-small">
-                        <div class="opacity-20">
-                            <div color="" vertical="false" class="divider"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flex justify-space-between is-vertical-tablet flex-gap-1-5rem">
-                <p class="label-regular">© 2025 Puboods Limited. All rights reserved.</p>
-                <div class="footerv2_social-wrapper"></div>
-            </div>
-        </div>
-    </div>
-</footer>
-
-</div>
-
-<div id="toast" class="toast">Coming soon...</div>
-
-<script src="../js/main.js" type="application/javascript"></script>
-
-</body>
-</html>
+{{ end }}

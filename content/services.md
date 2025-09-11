@@ -1,7 +1,7 @@
 ---
 title: "Our Services - Software Development Solutions"
 description: "Comprehensive software development services including custom web & mobile development, AI solutions, blockchain DApps, cloud services, and dedicated teams."
-layout: "single"
+layout: "services"
 ---
 
 # Our Services
