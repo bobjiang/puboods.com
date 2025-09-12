@@ -57,8 +57,8 @@ pluralizelisttitles = false
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
     style = "blue"
 
-    # Contact form settings
-    formspree_action = "https://formspree.io/f/YOUR_FORM_ID"
+    # Contact form settings (disabled)
+    formspree_action = ""
     contact_form_ajax = false
 
     about_us = "<p>Puboods is a leading software development company specializing in custom web and mobile applications, AI solutions, and blockchain development.</p>"

@@ -1,7 +1,5 @@
 +++
 title = "Contact Us - Get Your Project Started"
-id = "contact"
-type = "page"
 +++
 
 # Get Your Project Started
