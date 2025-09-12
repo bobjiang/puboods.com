@@ -36,18 +36,7 @@ pluralizelisttitles = false
     url = "/contact/"
     weight = 4
 
-# Top bar social links menu
-[[menu.topbar]]
-    weight = 1
-    name = "Phone"
-    url = "tel:+61 2 1234 5678"
-    pre = "<i class='fas fa-2x fa-phone'></i>"
-
-[[menu.topbar]]
-    weight = 2
-    name = "Email"
-    url = "mailto:hi@puboods.com"
-    pre = "<i class='fas fa-2x fa-envelope'></i>"
+# Top bar social links menu (disabled)
 
 [params]
     author = "Puboods Pty Ltd"
@@ -85,12 +74,8 @@ pluralizelisttitles = false
 
 # Enable or disable top bar with social icons
 [params.topbar]
-    enable = true
-    text = """<p class="hidden-sm hidden-xs">Contact us at hi@puboods.com for your software development needs.</p>
-      <p class="hidden-md hidden-lg"><a href="tel:+61212345678" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
-      <a href="mailto:hi@puboods.com" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
-      </p>
-      """
+    enable = false
+    text = ""
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
