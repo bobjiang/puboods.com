@@ -9,7 +9,7 @@ description = "From idea to deployment. Comprehensive software development servi
 
 ---
 
-## 🌐 Web Development
+## Web Development
 **React • Next.js • Vue.js • Node.js**
 
 Modern web applications that scale with your business:
@@ -18,7 +18,7 @@ Modern web applications that scale with your business:
 - E-commerce platforms with payment integration
 - Enterprise dashboards and admin panels
 
-## 📱 Mobile Development
+## Mobile Development
 **React Native • Flutter • iOS • Android**
 
 Cross-platform mobile apps that reach every user:
@@ -27,7 +27,7 @@ Cross-platform mobile apps that reach every user:
 - Mobile-first design and user experience
 - App Store optimization and deployment
 
-## 🤖 AI & Machine Learning
+## AI & Machine Learning
 **Python • TensorFlow • OpenAI • Computer Vision**
 
 Intelligent systems that automate and optimize:
@@ -36,7 +36,7 @@ Intelligent systems that automate and optimize:
 - Computer vision and image processing
 - Natural Language Processing (NLP) solutions
 
-## ⛓️ Blockchain & DeFi
+## Blockchain & DeFi
 **Solidity • Ethereum • Web3 • Smart Contracts**
 
 Decentralized applications for the future of finance:
@@ -49,7 +49,7 @@ Decentralized applications for the future of finance:
 
 # Cutting-Edge Technologies
 
-## ☁️ Cloud & DevOps
+## Cloud & DevOps
 **AWS • Azure • GCP • Docker • Kubernetes**
 
 Scalable infrastructure that grows with you:
@@ -58,7 +58,7 @@ Scalable infrastructure that grows with you:
 - Cloud migration and optimization
 - Monitoring and performance analytics
 
-## ⚡ MVP Development
+## MVP Development
 **Agile • 2-4 Week Sprints • User Testing**
 
 Fast-track your product to market:
@@ -67,7 +67,7 @@ Fast-track your product to market:
 - Market-ready MVP in 4-8 weeks
 - Post-launch scaling and feature expansion
 
-## 🎨 UI/UX Design
+## UI/UX Design
 **Figma • User Research • Responsive Design**
 
 User-centered design that converts:
@@ -76,7 +76,7 @@ User-centered design that converts:
 - Mobile-first responsive design
 - Accessibility compliance (WCAG 2.1)
 
-## 🛡️ Quality Assurance
+## Quality Assurance
 **Automated Testing • Security • Performance**
 
 Production-ready code that you can trust:
@@ -89,16 +89,16 @@ Production-ready code that you can trust:
 
 ## Why Choose Puboods?
 
-**⚡ Faster Time-to-Market**  
+**Faster Time-to-Market**  
 Launch in weeks, not months with our agile approach
 
-**🔍 Transparent Process**  
+**Transparent Process**  
 Weekly demos, clear communication, no surprises
 
-**🏆 Proven Expertise**  
+**Proven Expertise**  
 50+ successful projects across multiple industries
 
-**🔧 Flexible Engagement**  
+**Flexible Engagement**  
 Fixed-price, hourly, or dedicated team models
 
 ---

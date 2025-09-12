@@ -9,7 +9,7 @@ description = "Deep domain expertise in FinTech, Healthcare, eCommerce, and Bloc
 
 ---
 
-## 💰 FinTech & Financial Services
+## FinTech & Financial Services
 **Secure • Scalable • Compliant**
 
 Transform financial services with enterprise-grade solutions:
@@ -31,7 +31,7 @@ Transform financial services with enterprise-grade solutions:
 
 ---
 
-## 🏥 Healthcare & Telemedicine
+## Healthcare & Telemedicine
 **HIPAA Compliant • Secure • Patient-Focused**
 
 Digital health solutions that improve patient outcomes:
@@ -53,7 +53,7 @@ Digital health solutions that improve patient outcomes:
 
 ---
 
-## 🛒 eCommerce & Retail
+## eCommerce & Retail
 **Scalable • Mobile-First • Conversion-Optimized**
 
 Online platforms that drive sales and customer loyalty:
@@ -75,7 +75,7 @@ Online platforms that drive sales and customer loyalty:
 
 ---
 
-## ⛓️ Blockchain & DeFi
+## Blockchain & DeFi
 **Decentralized • Secure • Future-Ready**
 
 Next-generation blockchain applications:
@@ -97,23 +97,23 @@ Next-generation blockchain applications:
 
 ---
 
-## 🎯 Why Choose Our Industry Expertise?
+## Why Choose Our Industry Expertise?
 
-**🏆 Proven Track Record**  
+**Proven Track Record**  
 50+ successful projects across regulated industries
 
-**🔒 Compliance-First Approach**  
+**Compliance-First Approach**  
 Built-in compliance with PCI-DSS, HIPAA, GDPR, SOC 2
 
-**⚡ Faster Time-to-Market**  
+**Faster Time-to-Market**  
 Industry templates and pre-built compliance frameworks
 
-**🎯 Domain Specialists**  
+**Domain Specialists**  
 Teams with deep industry knowledge and technical expertise
 
 ---
 
-## 📊 Success Stories
+## Success Stories
 
 **FinTech Startup** — Reduced transaction processing time by **75%** with microservices architecture
 
