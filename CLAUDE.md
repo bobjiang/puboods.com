@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Hugo static site for puboods.com, a software development company website. The site uses the hugo-story theme and is hosted on Cloudflare.
+This is a Hugo static site for puboods.com, a software development company website. The site uses the hugo-universal-theme and is hosted on Cloudflare.
 
 ## Development Commands
 
