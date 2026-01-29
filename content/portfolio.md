@@ -1,6 +1,7 @@
 +++
 title = "Portfolio - Our Success Stories"
 description = "Explore innovative blockchain and DeFi projects we've built. From perpetual trading platforms to advanced token exchanges."
+layout = "portfolio"
 +++
 
 # Featured Projects
