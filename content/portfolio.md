@@ -13,6 +13,8 @@ See how we've helped innovative companies build cutting-edge blockchain applicat
 
 **[Visit ApeX Omni →](https://omni.apex.exchange/trade/BTCUSDT)**
 
+![ApeX Omni Platform](/img/portfolio/apex-omni.jpg)
+
 ### Overview
 A sophisticated decentralized exchange for perpetual futures trading, enabling traders to access leveraged positions on crypto assets with advanced risk management features.
 
@@ -41,6 +43,8 @@ A sophisticated decentralized exchange for perpetual futures trading, enabling t
 ## Hyper Index - Next-Gen Token Trading Platform
 
 **[Visit Hyper Index →](https://www.hyperindex.trade)**
+
+![Hyper Index Platform](/img/portfolio/hyper-index.jpg)
 
 ### Overview
 A streamlined decentralized token exchange platform providing seamless token swaps, liquidity pools, and portfolio management for DeFi users.
