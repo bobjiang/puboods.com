@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main class="main-wrapper">
     <!-- Hero Section -->
-    <header class="position-relative" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 60vh;">
+    <header class="portfolio-hero">
         <div class="page-padding">
             <div class="container-large">
                 <div class="padding-vertical padding-xxxlarge text-align-center">
@@ -15,8 +15,69 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <section class="padding-vertical padding-xxxlarge">
+    <!-- Featured Projects from Data Files -->
+    {{ if isset .Site.Data "projects" }}
+    {{ if gt (len .Site.Data.projects) 0 }}
+    <section class="portfolio-featured">
+        <div class="page-padding">
+            <div class="container-large">
+                <h2 class="portfolio-section-title">Featured Projects</h2>
+                <p class="portfolio-section-subtitle">Production applications we engineered end-to-end for clients in blockchain and fintech.</p>
+
+                {{ $projects := sort .Site.Data.projects "weight" }}
+                {{ range $projects }}
+                <div class="pf-card">
+                    <div class="pf-card__media">
+                        {{ if .image }}
+                        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ .image }}" alt="{{ .name }}" class="pf-card__img">
+                        </a>
+                        {{ else }}
+                        <div class="pf-card__img-placeholder">
+                            <i class="{{ .icon }}"></i>
+                        </div>
+                        {{ end }}
+                    </div>
+                    <div class="pf-card__body">
+                        <div class="pf-card__eyebrow">
+                            <i class="{{ .icon }}"></i>
+                            <span>{{ .subtitle }}</span>
+                        </div>
+                        <h3 class="pf-card__title">{{ .name }}</h3>
+                        <p class="pf-card__desc">{{ .description }}</p>
+
+                        {{ if .metrics }}
+                        <div class="pf-card__stats">
+                            {{ range .metrics }}
+                            <div class="pf-card__stat">
+                                <div class="pf-card__stat-value">{{ .value }}</div>
+                                <div class="pf-card__stat-label">{{ .label }}</div>
+                            </div>
+                            {{ end }}
+                        </div>
+                        {{ end }}
+
+                        <div class="pf-card__tags">
+                            {{ range .tags }}
+                            <span class="pf-card__tag">{{ . }}</span>
+                            {{ end }}
+                        </div>
+
+                        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="pf-card__cta">
+                            View Live Project <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    {{ end }}
+    {{ end }}
+
+    <!-- Additional Content from Markdown -->
+    {{ if .Content }}
+    <section class="portfolio-content">
         <div class="page-padding">
             <div class="container-large">
                 <div class="content">
@@ -25,14 +86,15 @@
             </div>
         </div>
     </section>
+    {{ end }}
 
     <!-- CTA Section -->
-    <section class="padding-vertical padding-xxxlarge" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+    <section class="portfolio-cta">
         <div class="page-padding">
             <div class="container-large">
                 <div class="text-align-center">
-                    <h2 class="heading-large text-color-white margin-bottom margin-medium">Ready to Build Your DeFi Project?</h2>
-                    <p class="paragraph-xlarge text-color-white opacity-90 margin-bottom margin-large">Whether you're launching a DEX, NFT marketplace, or innovative DeFi protocol, we have the expertise to bring your vision to life.</p>
+                    <h2 class="heading-large text-color-white margin-bottom margin-medium">Ready to Build Your Project?</h2>
+                    <p class="paragraph-xlarge text-color-white opacity-90 margin-bottom margin-large">From DeFi protocols to enterprise platforms, we turn ambitious ideas into production software.</p>
                     <div class="buttonwrapper center-button">
                         <a href="https://calendly.com/bobjiang" class="button is-large w-inline-block" style="background: white; color: #667eea;">
                             <div>Schedule Free Consultation</div>
@@ -49,61 +111,236 @@
 </main>
 
 <style>
-    .content img {
+/* Hero */
+.portfolio-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Section titles */
+.portfolio-section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 8px;
+}
+.portfolio-section-subtitle {
+    font-size: 17px;
+    color: #64748b;
+    margin-bottom: 48px;
+    max-width: 560px;
+}
+
+/* Featured section */
+.portfolio-featured {
+    padding: 80px 0 40px;
+}
+
+/* Project card */
+.pf-card {
+    display: flex;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    margin-bottom: 48px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.pf-card:hover {
+    box-shadow: 0 8px 36px rgba(102,126,234,0.14);
+    transform: translateY(-3px);
+}
+.pf-card__media {
+    flex: 0 0 50%;
+    max-width: 50%;
+    overflow: hidden;
+}
+.pf-card__img {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.pf-card:hover .pf-card__img {
+    transform: scale(1.03);
+}
+.pf-card__img-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 380px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-size: 72px;
+    color: rgba(255,255,255,0.5);
+}
+.pf-card__body {
+    flex: 1;
+    padding: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.pf-card__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #667eea;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+.pf-card__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 14px;
+}
+.pf-card__desc {
+    font-size: 15px;
+    color: #4a5568;
+    line-height: 1.75;
+    margin-bottom: 24px;
+}
+.pf-card__stats {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 24px;
+    padding: 18px 0;
+    border-top: 1px solid #edf2f7;
+    border-bottom: 1px solid #edf2f7;
+}
+.pf-card__stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a202c;
+}
+.pf-card__stat-label {
+    font-size: 12px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+.pf-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+.pf-card__tag {
+    background: #eef2ff;
+    color: #667eea;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.pf-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #667eea;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.pf-card__cta:hover {
+    color: #764ba2;
+    text-decoration: none;
+}
+
+/* Markdown content area */
+.portfolio-content {
+    padding: 60px 0 80px;
+    background: #f7f8fc;
+}
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    margin: 2rem 0;
+}
+.content h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: #1a202c;
+    font-size: 26px;
+}
+.content h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: #2d3748;
+}
+.content ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+.content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+.content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #4a5568;
+}
+.content a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+.content a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+.content hr {
+    margin: 3rem 0;
+    border: none;
+    border-top: 2px solid #e2e8f0;
+}
+.content strong {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* CTA */
+.portfolio-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .pf-card {
+        flex-direction: column;
+    }
+    .pf-card__media {
+        flex: none;
         max-width: 100%;
-        height: auto;
-        border-radius: 12px;
-        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        margin: 2rem 0;
     }
-    
-    .content h2 {
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-        color: #1a202c;
+    .pf-card__img {
+        min-height: 240px;
     }
-    
-    .content h3 {
-        margin-top: 2rem;
-        margin-bottom: 0.75rem;
-        color: #2d3748;
+    .pf-card__img-placeholder {
+        min-height: 240px;
     }
-    
-    .content ul {
-        margin-left: 1.5rem;
-        margin-bottom: 1rem;
+    .pf-card__body {
+        padding: 28px;
     }
-    
-    .content li {
-        margin-bottom: 0.5rem;
-        line-height: 1.6;
+    .pf-card__stats {
+        gap: 20px;
     }
-    
-    .content p {
-        margin-bottom: 1rem;
-        line-height: 1.8;
+    .pf-card__stat-value {
+        font-size: 20px;
     }
-    
-    .content a {
-        color: #667eea;
-        text-decoration: none;
-        font-weight: 600;
-    }
-    
-    .content a:hover {
-        color: #764ba2;
-        text-decoration: underline;
-    }
-    
-    .content hr {
-        margin: 3rem 0;
-        border: none;
-        border-top: 2px solid #e2e8f0;
-    }
-    
-    .content strong {
-        color: #2d3748;
-        font-weight: 600;
-    }
+}
 </style>
 {{ end }}

@@ -4,37 +4,69 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Hugo static site for puboods.com, a software development company website. The site uses the hugo-universal-theme and is hosted on Cloudflare.
+Hugo static site for puboods.com — a software development company website. Uses the `hugo-universal-theme` and is hosted on Cloudflare.
 
 ## Development Commands
 
-- `hugo server` - Start development server with live reload
-- `hugo` - Build the site for production (outputs to /public)
-- `hugo server -D` - Start server including draft content
-- `hugo --minify` - Build with minified output
+- `hugo server` — Dev server with live reload
+- `hugo server -D` — Dev server including draft content
+- `hugo` — Production build (outputs to `public/`)
+- `hugo --minify` — Minified production build
 
 ## Architecture
 
-### Core Structure
-- **hugo.toml** - Main Hugo configuration file
-- **config.toml** - Additional configuration (local/remote baseURL settings)
-- **layouts/index.html** - Main page template that assembles data-driven sections
-- **data/*.yml** - YAML files containing page content (banner.yml, spotlight1.yml, spotlight2.yml, spotlight3.yml)
-- **themes/hugo-story/** - Git submodule containing the hugo-story theme
+### Two Configuration Files
 
-### Content Management
-The site uses a data-driven approach where the homepage content is managed through YAML files in the /data directory rather than traditional markdown content files. The main template (layouts/index.html) pulls content from these data files to build the page sections.
+- **hugo.toml** — Primary config: theme, menus, params, section toggles (carousel, features, projects, testimonials, see_more). Each homepage section can be enabled/disabled via `[params.<section>].enable`.
+- **config.toml** — Production overrides: sets `baseURL = 'https://puboods.com/'` and meta description. Values here override hugo.toml.
 
-### Theme Integration
-The site uses the hugo-story theme as a git submodule. To update the theme:
+### Homepage: Data-Driven Sections
+
+`layouts/index.html` assembles the homepage by calling theme partials in order: carousel → features → projects → testimonials → see_more → recent_posts → clients → footer. Each partial reads from YAML files in `data/`:
+
+| Section | Data directory | Files |
+|---------|---------------|-------|
+| Hero carousel | `data/carousel/` | `hero.yaml` |
+| Service features | `data/features/` | 6 files (web-development, ai-ml, blockchain, cloud-solutions, mvp-development, ui-ux) |
+| Featured projects | `data/projects/` | `apex.yaml`, `hyperindex.yaml` |
+| Testimonials | `data/testimonials/` | `client1.yaml`, `client2.yaml` |
+
+To add/edit homepage content, modify these YAML files — no template changes needed.
+
+### Custom Layouts
+
+Pages with unique designs have custom layout templates in `layouts/_default/`:
+
+- **services.html** — Services page with hero, card grid, benefits section (used by `content/services.md` via `layout: services` frontmatter)
+- **industries.html** — Industries page with industry cards and compliance badges
+- **portfolio.html** — Portfolio page with project showcases
+- **single.html** — Generic single-page layout (default for content pages)
+
+The one custom partial is `layouts/partials/projects.html` (homepage project showcase grid).
+
+### Content Pages
+
+Standard markdown content lives in `content/`:
+- `_index.md` — Homepage
+- `services.md`, `industries.md`, `contact.md` — Top-level pages
+- `portfolio/_index.md` — Portfolio section
+
+Pages select their layout via frontmatter `layout:` field (e.g., `layout: services`).
+
+### Theme
+
+Git submodule at `themes/hugo-universal-theme` (from `github.com/devcows/hugo-universal-theme`). Update with:
 ```bash
-git submodule update --remote themes/hugo-story
+git submodule update --remote themes/hugo-universal-theme
 ```
 
-### Deployment
-The site is configured for Cloudflare hosting with relative URLs enabled. The build output goes to the /public directory.
+### Static Assets
 
-## Configuration Notes
-- Uses relativeURLs for flexible deployment
-- Disables taxonomy and section kinds since this is a single-page site
-- Content structure is minimal as the site uses data files for content management
+- `static/img/` — Logo (`logo.svg`), favicons, portfolio screenshots
+- `static/css/` — FontAwesome CSS
+- `static/js/` — FontAwesome JS
+- `static/webfonts/` — FontAwesome web fonts
+
+### Deployment
+
+Hosted on Cloudflare. Build output goes to `public/`. The `hugo.toml` uses `baseURL = "/"` (relative) for local dev; `config.toml` sets the production URL.

@@ -2,46 +2,242 @@
 {{ if .Site.Params.projects.enable }}
 {{ if isset .Site.Data "projects" }}
 {{ if gt (len .Site.Data.projects) 0 }}
-<section class="bar background-white no-mb">
+<section class="bar no-mb" style="background: #f7f8fc; padding: 80px 0;">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="heading text-center">
-                    <h2>{{ .Site.Params.projects.title }}</h2>
-                </div>
-                <p class="lead text-center">
+            <div class="col-md-12 text-center">
+                <h2 style="font-size: 36px; font-weight: 700; color: #1a202c; margin-bottom: 12px;">{{ .Site.Params.projects.title }}</h2>
+                <p style="font-size: 18px; color: #64748b; max-width: 600px; margin: 0 auto 50px;">
                     {{ .Site.Params.projects.subtitle | markdownify }}
                 </p>
             </div>
         </div>
 
-        <div class="row" style="margin-top: 30px;">
-            {{ $projects := sort .Site.Data.projects "weight" }}
-            {{ range $projects }}
-            <div class="col-md-6" style="margin-bottom: 30px;">
-                <div style="border: 1px solid #e8e8e8; border-radius: 8px; overflow: hidden; height: 100%; transition: box-shadow 0.3s ease; background: #fff;">
-                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center;">
-                        <i class="{{ .icon }}" style="font-size: 48px; color: #fff; margin-bottom: 15px; display: block;"></i>
-                        <h3 style="color: #fff; margin: 0; font-size: 24px;">{{ .name }}</h3>
-                        <p style="color: rgba(255,255,255,0.85); margin: 8px 0 0 0; font-size: 15px;">{{ .subtitle }}</p>
-                    </div>
-                    <div style="padding: 25px 30px;">
-                        <p style="color: #555; line-height: 1.7; margin-bottom: 20px;">{{ .description }}</p>
-                        <div style="margin-bottom: 20px;">
-                            {{ range .tags }}
-                            <span style="display: inline-block; background: #f0f0f7; color: #667eea; padding: 4px 12px; border-radius: 20px; font-size: 13px; margin: 0 6px 8px 0; font-weight: 500;">{{ . }}</span>
-                            {{ end }}
+        {{ $projects := sort .Site.Data.projects "weight" }}
+        {{ range $projects }}
+        <div class="row" style="margin-bottom: 40px;">
+            <div class="col-md-12">
+                <div class="project-card">
+                    <div class="row" style="display: flex; flex-wrap: wrap;">
+                        <!-- Screenshot -->
+                        <div class="col-md-6" style="padding: 0;">
+                            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="project-card__image-link">
+                                {{ if .image }}
+                                <img src="{{ .image }}" alt="{{ .name }} screenshot" class="project-card__image">
+                                {{ else }}
+                                <div class="project-card__image-placeholder">
+                                    <i class="{{ .icon }}" style="font-size: 64px; color: #a0aec0;"></i>
+                                </div>
+                                {{ end }}
+                            </a>
                         </div>
-                        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" style="display: inline-block; color: #667eea; font-weight: 600; text-decoration: none; font-size: 15px;">
-                            View Project <i class="fas fa-external-link-alt" style="font-size: 12px; margin-left: 4px;"></i>
-                        </a>
+                        <!-- Content -->
+                        <div class="col-md-6" style="display: flex; align-items: center;">
+                            <div class="project-card__content">
+                                <div class="project-card__header">
+                                    <i class="{{ .icon }}" style="font-size: 20px; color: #667eea; margin-right: 10px;"></i>
+                                    <span class="project-card__subtitle">{{ .subtitle }}</span>
+                                </div>
+                                <h3 class="project-card__title">{{ .name }}</h3>
+                                <p class="project-card__desc">{{ .description }}</p>
+
+                                <!-- Metrics -->
+                                {{ if .metrics }}
+                                <div class="project-card__metrics">
+                                    {{ range .metrics }}
+                                    <div class="project-card__metric">
+                                        <span class="project-card__metric-value">{{ .value }}</span>
+                                        <span class="project-card__metric-label">{{ .label }}</span>
+                                    </div>
+                                    {{ end }}
+                                </div>
+                                {{ end }}
+
+                                <!-- Tags -->
+                                <div class="project-card__tags">
+                                    {{ range .tags }}
+                                    <span class="project-card__tag">{{ . }}</span>
+                                    {{ end }}
+                                </div>
+
+                                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                                    View Live Project <i class="fas fa-arrow-right" style="margin-left: 6px; font-size: 13px;"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            {{ end }}
+        </div>
+        {{ end }}
+
+        <!-- View all projects link -->
+        <div class="row">
+            <div class="col-md-12 text-center" style="margin-top: 10px;">
+                <a href="/portfolio/" class="project-card__view-all">
+                    View All Projects <i class="fas fa-long-arrow-alt-right" style="margin-left: 8px;"></i>
+                </a>
+            </div>
         </div>
     </div>
 </section>
+
+<style>
+.project-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.project-card:hover {
+    box-shadow: 0 12px 40px rgba(102,126,234,0.15);
+    transform: translateY(-4px);
+}
+.project-card__image-link {
+    display: block;
+    height: 100%;
+    min-height: 320px;
+    overflow: hidden;
+}
+.project-card__image {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.project-card:hover .project-card__image {
+    transform: scale(1.03);
+}
+.project-card__image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 320px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.project-card__content {
+    padding: 40px;
+}
+.project-card__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.project-card__subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #667eea;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.project-card__title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 14px 0;
+}
+.project-card__desc {
+    font-size: 15px;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+.project-card__metrics {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    padding: 16px 0;
+    border-top: 1px solid #edf2f7;
+    border-bottom: 1px solid #edf2f7;
+}
+.project-card__metric {
+    display: flex;
+    flex-direction: column;
+}
+.project-card__metric-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a202c;
+}
+.project-card__metric-label {
+    font-size: 12px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+.project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+.project-card__tag {
+    display: inline-block;
+    background: #eef2ff;
+    color: #667eea;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.project-card__link {
+    display: inline-flex;
+    align-items: center;
+    color: #667eea;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.project-card__link:hover {
+    color: #764ba2;
+    text-decoration: none;
+}
+.project-card__view-all {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #667eea;
+    text-decoration: none;
+    padding: 12px 28px;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.project-card__view-all:hover {
+    background: #667eea;
+    color: #fff;
+    text-decoration: none;
+}
+@media (max-width: 991px) {
+    .project-card .row {
+        display: block !important;
+    }
+    .project-card__image-link {
+        min-height: 220px;
+    }
+    .project-card__image {
+        min-height: 220px;
+    }
+    .project-card__image-placeholder {
+        min-height: 220px;
+    }
+    .project-card__content {
+        padding: 28px;
+    }
+    .project-card__metrics {
+        gap: 16px;
+    }
+    .project-card__metric-value {
+        font-size: 18px;
+    }
+}
+</style>
 {{ end }}
 {{ end }}
 {{ end }}
