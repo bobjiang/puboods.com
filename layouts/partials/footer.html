@@ -1,0 +1,36 @@
+<div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+
+    <div class="flex flex-wrap space-y-6 mb-4">
+        <div class="w-full md:w-3/5 flex flex-col space-y-4 md:pr-8 lg:pr-10">
+            <a class="flex items-center group" href="{{ .Site.BaseURL }}">
+                {{ with .Site.Params.logo }}
+                <img src="/{{ . }}" alt="{{ $.Site.Title }}" class="h-8 w-auto mr-2">
+                {{ end }}
+                <span class="text-2xl font-semibold uppercase">Puboods</span>
+            </a>
+            <p class="font-semibold">Professional software development and outsourcing services.</p>
+            <p class="text-zinc-600">Puboods is a leading software development company specializing in custom web and mobile applications, AI solutions, and blockchain development.</p>
+        </div>
+
+        <div class="self-center flex flex-col w-full md:w-2/5">
+            <div class="space-y-2">
+                <p class="font-semibold">Contact</p>
+                <p><a href="mailto:hi@puboods.com" class="hover:underline">hi@puboods.com</a></p>
+                <p><a href="https://calendly.com/bobjiang" class="hover:underline" target="_blank" rel="noopener noreferrer">Schedule a Call</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-8">
+        <ul class="flex items-center space-x-4">
+            {{ range .Site.Menus.main }}
+            <li><a class="decoration-auto hover:underline font-semibold" href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+
+    <div class="border-t pt-4">
+        <p class="text-sm">{{ .Site.Params.copyright | default (printf "Copyright &copy; %d Puboods Pty Ltd. All rights reserved." now.Year) | safeHTML }}</p>
+    </div>
+
+</div>

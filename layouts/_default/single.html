@@ -1,54 +1,15 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+{{ define "main" }}
 
-  <head>
-    {{ partial "headers.html" . }}
-    {{ partial "custom_headers.html" . }}
-  </head>
-
-  <body>
-
-    <div id="all">
-
-        {{ partial "top.html" . }}
-
-        {{ partial "nav.html" . }}
-
-<main class="main-wrapper">
-    <div style="max-width: 800px; margin: 0 auto; padding: 60px 20px 80px;">
-        <div style="text-align: center; margin-bottom: 48px;">
-            <h1 style="font-family: var(--font-heading); font-size: 36px; font-weight: 700; color: var(--heading);">{{ .Title }}</h1>
-            {{ if .Description }}
-            <p style="font-size: 17px; color: var(--body-text); margin-top: 12px;">{{ .Description }}</p>
-            {{ end }}
-        </div>
-        <div class="single-content" style="font-family: var(--font-body); color: var(--body-text); line-height: 1.8;">
-            {{ .Content }}
-        </div>
+<article class="py-16">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+        <h1 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">{{ .Title }}</h1>
+        {{ if .Description }}
+        <p class="text-lg text-zinc-500">{{ .Description }}</p>
+        {{ end }}
     </div>
-</main>
-
-<style>
-.single-content h2, .single-content h3, .single-content h4 {
-    font-family: var(--font-heading);
-    color: var(--heading);
-}
-.single-content a {
-    color: var(--accent);
-    font-weight: 600;
-    text-decoration: none;
-}
-.single-content a:hover {
-    color: var(--accent-hover);
-}
-</style>
-
-        {{ partial "footer.html" . }}
-
+    <div class="max-w-3xl mx-auto prose prose-zinc prose-lg">
+        {{ .Content }}
     </div>
-    <!-- /#all -->
+</article>
 
-    {{ partial "scripts.html" . }}
-
-  </body>
-</html>
+{{ end }}

@@ -1,403 +1,96 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+{{ define "main" }}
 
-  <head>
-    {{ partial "headers.html" . }}
-    {{ partial "custom_headers.html" . }}
-  </head>
+<!-- Hero Section -->
+<section class="bg-zinc-900 -mx-4 md:-mx-6 lg:-mx-8">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-24 md:py-32 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">{{ .Title }}</h1>
+        <p class="text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto">{{ .Description }}</p>
+    </div>
+</section>
 
-  <body>
+<!-- Featured Projects from Data Files -->
+{{ if isset .Site.Data "projects" }}
+{{ if gt (len .Site.Data.projects) 0 }}
+<section class="py-20">
+    <h2 class="text-3xl font-bold text-zinc-900 mb-3">Featured Projects</h2>
+    <p class="text-zinc-500 mb-12 max-w-xl">Production applications we engineered end-to-end for clients in blockchain and fintech.</p>
 
-    <div id="all">
-
-        {{ partial "top.html" . }}
-
-        {{ partial "nav.html" . }}
-
-<main class="main-wrapper">
-    <!-- Hero Section -->
-    <header class="portfolio-hero">
-        <div class="page-padding">
-            <div class="container-large">
-                <div class="padding-vertical padding-xxxlarge text-align-center">
-                    <div class="container-small">
-                        <h1 class="heading-huge text-color-white">{{ .Title }}</h1>
-                        <div class="spacer-medium"></div>
-                        <p class="paragraph-xlarge text-color-white opacity-90">{{ .Description }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Featured Projects from Data Files -->
-    {{ if isset .Site.Data "projects" }}
-    {{ if gt (len .Site.Data.projects) 0 }}
-    <section class="portfolio-featured">
-        <div class="page-padding">
-            <div class="container-large">
-                <h2 class="portfolio-section-title">Featured Projects</h2>
-                <p class="portfolio-section-subtitle">Production applications we engineered end-to-end for clients in blockchain and fintech.</p>
-
-                {{ $projects := sort .Site.Data.projects "weight" }}
-                {{ range $projects }}
-                <div class="pf-card">
-                    <div class="pf-card__media">
-                        {{ if .image }}
-                        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
-                            <img src="{{ .image }}" alt="{{ .name }}" class="pf-card__img">
-                        </a>
-                        {{ else }}
-                        <div class="pf-card__img-placeholder">
-                            <i class="{{ .icon }}"></i>
-                        </div>
-                        {{ end }}
-                    </div>
-                    <div class="pf-card__body">
-                        <div class="pf-card__eyebrow">
-                            <i class="{{ .icon }}"></i>
-                            <span>{{ .subtitle }}</span>
-                        </div>
-                        <h3 class="pf-card__title">{{ .name }}</h3>
-                        <p class="pf-card__desc">{{ .description }}</p>
-
-                        {{ if .metrics }}
-                        <div class="pf-card__stats">
-                            {{ range .metrics }}
-                            <div class="pf-card__stat">
-                                <div class="pf-card__stat-value">{{ .value }}</div>
-                                <div class="pf-card__stat-label">{{ .label }}</div>
-                            </div>
-                            {{ end }}
-                        </div>
-                        {{ end }}
-
-                        <div class="pf-card__tags">
-                            {{ range .tags }}
-                            <span class="pf-card__tag">{{ . }}</span>
-                            {{ end }}
-                        </div>
-
-                        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="pf-card__cta">
-                            View Live Project <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+    {{ $projects := sort .Site.Data.projects "weight" }}
+    {{ range $projects }}
+    <div class="bg-zinc-100 rounded-2xl overflow-hidden mb-10 hover:bg-zinc-200 transition">
+        <div class="flex flex-col lg:flex-row">
+            <!-- Screenshot -->
+            <div class="lg:w-1/2">
+                {{ if .image }}
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="block h-full">
+                    <img src="{{ .image }}" alt="{{ .name }}" class="w-full h-full min-h-[280px] object-cover hover:scale-[1.02] transition duration-500">
+                </a>
+                {{ else }}
+                <div class="flex items-center justify-center h-full min-h-[280px] bg-zinc-900 text-zinc-500 text-6xl">
+                    <i class="{{ .icon }}"></i>
                 </div>
                 {{ end }}
             </div>
-        </div>
-    </section>
-    {{ end }}
-    {{ end }}
-
-    <!-- Additional Content from Markdown -->
-    {{ if .Content }}
-    <section class="portfolio-content">
-        <div class="page-padding">
-            <div class="container-large">
-                <div class="content">
-                    {{ .Content }}
+            <!-- Content -->
+            <div class="lg:w-1/2 p-8 lg:p-10 flex flex-col justify-center">
+                <div class="flex items-center gap-2 text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-3">
+                    <i class="{{ .icon }}"></i>
+                    <span>{{ .subtitle }}</span>
                 </div>
-            </div>
-        </div>
-    </section>
-    {{ end }}
+                <h3 class="text-2xl font-bold text-zinc-900 mb-3">{{ .name }}</h3>
+                <p class="text-zinc-500 leading-relaxed mb-6">{{ .description }}</p>
 
-    <!-- CTA Section -->
-    <section class="portfolio-cta">
-        <div class="page-padding">
-            <div class="container-large">
-                <div class="text-align-center">
-                    <h2 class="heading-large text-color-white margin-bottom margin-medium">Ready to Build Your Project?</h2>
-                    <p class="paragraph-xlarge text-color-white opacity-90 margin-bottom margin-large">From DeFi protocols to enterprise platforms, we turn ambitious ideas into production software.</p>
-                    <div class="buttonwrapper center-button">
-                        <a href="https://calendly.com/bobjiang" class="button is-large w-inline-block" style="background: var(--white); color: var(--accent);">
-                            <div>Schedule Free Consultation</div>
-                        </a>
-                        <div class="spacer-small"></div>
-                        <a href="mailto:hi@puboods.com" class="button-secondary is-large w-inline-block" style="border-color: var(--white); color: var(--white);">
-                            <div>Email Us</div>
-                        </a>
+                {{ if .metrics }}
+                <div class="flex gap-8 py-4 border-t border-b border-zinc-300 mb-6">
+                    {{ range .metrics }}
+                    <div>
+                        <div class="text-xl font-bold text-zinc-900">{{ .value }}</div>
+                        <div class="text-xs text-zinc-400 uppercase tracking-wider mt-1">{{ .label }}</div>
                     </div>
+                    {{ end }}
                 </div>
+                {{ end }}
+
+                <div class="flex flex-wrap gap-2 mb-6">
+                    {{ range .tags }}
+                    <span class="bg-white text-zinc-600 px-3 py-1 rounded-full text-sm font-medium">{{ . }}</span>
+                    {{ end }}
+                </div>
+
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-zinc-900 font-semibold border-2 border-zinc-900 px-6 py-2 rounded-full hover:bg-zinc-900 hover:text-white transition text-sm uppercase tracking-wider w-fit">
+                    View Live Project <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
-    </section>
-</main>
-
-<style>
-/* Hero */
-.portfolio-hero {
-    background: var(--dark);
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-}
-
-/* Section titles */
-.portfolio-section-title {
-    font-family: var(--font-heading);
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--heading);
-    margin-bottom: 8px;
-}
-.portfolio-section-subtitle {
-    font-family: var(--font-heading);
-    font-size: 17px;
-    color: var(--body-text);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 48px;
-    max-width: 560px;
-}
-
-/* Featured section */
-.portfolio-featured {
-    padding: 80px 0 40px;
-}
-
-/* Project card */
-.pf-card {
-    display: flex;
-    background: var(--white);
-    border-radius: var(--radius);
-    overflow: hidden;
-    border: 1px solid var(--border);
-    box-shadow: var(--card-shadow);
-    margin-bottom: 48px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
-}
-.pf-card:hover {
-    box-shadow: var(--card-shadow-hover);
-    border-color: var(--accent);
-    transform: translateY(-3px);
-}
-.pf-card__media {
-    flex: 0 0 50%;
-    max-width: 50%;
-    overflow: hidden;
-}
-.pf-card__img {
-    width: 100%;
-    height: 100%;
-    min-height: 380px;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-.pf-card:hover .pf-card__img {
-    transform: scale(1.03);
-}
-.pf-card__img-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    min-height: 380px;
-    background: var(--dark);
-    font-size: 72px;
-    color: rgba(255,255,255,0.5);
-}
-.pf-card__body {
-    flex: 1;
-    padding: 44px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.pf-card__eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--accent);
-    font-family: var(--font-heading);
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 10px;
-}
-.pf-card__title {
-    font-family: var(--font-heading);
-    font-size: 30px;
-    font-weight: 700;
-    color: var(--heading);
-    margin: 0 0 14px;
-}
-.pf-card__desc {
-    font-family: var(--font-body);
-    font-size: 15px;
-    color: var(--body-text);
-    line-height: 1.75;
-    margin-bottom: 24px;
-}
-.pf-card__stats {
-    display: flex;
-    gap: 32px;
-    margin-bottom: 24px;
-    padding: 18px 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-}
-.pf-card__stat-value {
-    font-family: var(--font-heading);
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--heading);
-}
-.pf-card__stat-label {
-    font-family: var(--font-heading);
-    font-size: 12px;
-    color: #999;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 2px;
-}
-.pf-card__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 24px;
-}
-.pf-card__tag {
-    background: #fce4ef;
-    color: var(--accent);
-    padding: 5px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 500;
-}
-.pf-card__cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--accent);
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    padding: 10px 24px;
-    border: 2px solid var(--accent);
-    border-radius: var(--radius-pill);
-    transition: color 0.2s ease, background 0.2s ease;
-}
-.pf-card__cta:hover {
-    color: var(--white);
-    background: var(--accent);
-    text-decoration: none;
-}
-
-/* Markdown content area */
-.portfolio-content {
-    padding: 60px 0 80px;
-    background: var(--light-bg);
-}
-.content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--radius);
-    box-shadow: var(--card-shadow-hover);
-    margin: 2rem 0;
-}
-.content h2 {
-    font-family: var(--font-heading);
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    color: var(--heading);
-    font-size: 26px;
-}
-.content h3 {
-    font-family: var(--font-heading);
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-    color: var(--heading);
-}
-.content ul {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-}
-.content li {
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-}
-.content p {
-    font-family: var(--font-body);
-    margin-bottom: 1rem;
-    line-height: 1.8;
-    color: var(--body-text);
-}
-.content a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-}
-.content a:hover {
-    color: var(--accent-hover);
-    text-decoration: underline;
-}
-.content hr {
-    margin: 3rem 0;
-    border: none;
-    border-top: 2px solid var(--border);
-}
-.content strong {
-    color: var(--heading);
-    font-weight: 600;
-}
-
-/* CTA */
-.portfolio-cta {
-    padding: 80px 0;
-    background: var(--dark);
-}
-.portfolio-cta .button.is-large {
-    border-radius: var(--radius-pill);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: var(--font-heading);
-}
-.portfolio-cta .button-secondary.is-large {
-    border-radius: var(--radius-pill);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: var(--font-heading);
-}
-
-/* Responsive */
-@media (max-width: 991px) {
-    .pf-card {
-        flex-direction: column;
-    }
-    .pf-card__media {
-        flex: none;
-        max-width: 100%;
-    }
-    .pf-card__img {
-        min-height: 240px;
-    }
-    .pf-card__img-placeholder {
-        min-height: 240px;
-    }
-    .pf-card__body {
-        padding: 28px;
-    }
-    .pf-card__stats {
-        gap: 20px;
-    }
-    .pf-card__stat-value {
-        font-size: 20px;
-    }
-}
-</style>
-
-        {{ partial "footer.html" . }}
-
     </div>
-    <!-- /#all -->
+    {{ end }}
+</section>
+{{ end }}
+{{ end }}
 
-    {{ partial "scripts.html" . }}
+<!-- Additional Content from Markdown -->
+{{ if .Content }}
+<section class="py-10 border-t border-zinc-200">
+    <div class="prose prose-zinc max-w-none">
+        {{ .Content }}
+    </div>
+</section>
+{{ end }}
 
-  </body>
-</html>
+<!-- CTA Section -->
+<section class="bg-zinc-900 -mx-4 md:-mx-6 lg:-mx-8 py-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Build Your Project?</h2>
+        <p class="text-lg text-zinc-300 max-w-xl mx-auto mb-10">From DeFi protocols to enterprise platforms, we turn ambitious ideas into production software.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://calendly.com/bobjiang" class="inline-block bg-white text-zinc-900 font-semibold px-8 py-3 rounded-full hover:bg-zinc-200 transition text-sm uppercase tracking-wider">
+                Schedule Free Consultation
+            </a>
+            <a href="mailto:hi@puboods.com" class="inline-block border-2 border-white text-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-zinc-900 transition text-sm uppercase tracking-wider">
+                Email Us
+            </a>
+        </div>
+    </div>
+</section>
+
+{{ end }}

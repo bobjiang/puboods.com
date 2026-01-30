@@ -1,39 +1,161 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+{{ define "main" }}
 
-  <head>
-    {{ partial "headers.html" . }}
-    {{ partial "custom_headers.html" . }}
-  </head>
-
-  <body>
-
-    <div id="all">
-
-        {{ partial "top.html" . }}
-
-        {{ partial "nav.html" . }}
-
-        {{ partial "carousel.html" . }}
-
-        {{ partial "features.html" . }}
-
-        {{ partial "projects.html" . }}
-
-        {{ partial "testimonials.html" . }}
-
-        {{ partial "see_more.html" . }}
-
-        {{ partial "recent_posts.html" . }}
-
-        {{ partial "clients.html" . }}
-
-        {{ partial "footer.html" . }}
-
+<!-- Hero Section -->
+{{ $hero := index .Site.Data.carousel "hero" }}
+{{ if $hero }}
+<section class="relative bg-zinc-900 -mx-4 md:-mx-6 lg:-mx-8">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-24 md:py-32 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">{{ $hero.title }}</h1>
+        <div class="text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto mb-10">
+            {{ $hero.description | safeHTML }}
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://calendly.com/bobjiang" class="inline-block bg-white text-zinc-900 font-semibold px-8 py-3 rounded-full hover:bg-zinc-200 transition">
+                Get Started Today
+            </a>
+            <a href="/services/" class="inline-block border-2 border-white text-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-zinc-900 transition">
+                Our Services
+            </a>
+        </div>
     </div>
-    <!-- /#all -->
+</section>
+{{ end }}
 
-    {{ partial "scripts.html" . }}
+<!-- Features Section -->
+{{ if .Site.Params.features.enable }}
+{{ if isset .Site.Data "features" }}
+<section class="py-20">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">What We Do</h2>
+        <p class="text-lg text-zinc-500 max-w-xl mx-auto">End-to-end software development services for modern businesses</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {{ $features := sort .Site.Data.features "weight" }}
+        {{ range $features }}
+        <div class="bg-zinc-100 rounded-2xl p-8 hover:bg-zinc-200 transition group">
+            <div class="w-14 h-14 bg-zinc-900 text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                <i class="{{ .icon }} text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-zinc-900 mb-3">{{ .name }}</h3>
+            <p class="text-zinc-500 leading-relaxed">{{ .description }}</p>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+{{ end }}
 
-  </body>
-</html>
+<!-- Projects Section -->
+{{ if .Site.Params.projects.enable }}
+{{ if isset .Site.Data "projects" }}
+{{ if gt (len .Site.Data.projects) 0 }}
+<section class="py-20 bg-zinc-100 -mx-4 md:-mx-6 lg:-mx-8">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">{{ .Site.Params.projects.title }}</h2>
+            <p class="text-lg text-zinc-500 max-w-xl mx-auto">{{ .Site.Params.projects.subtitle }}</p>
+        </div>
+
+        {{ $projects := sort .Site.Data.projects "weight" }}
+        {{ range $projects }}
+        <div class="bg-white rounded-2xl overflow-hidden border border-zinc-200 mb-10 hover:border-zinc-400 transition">
+            <div class="flex flex-col lg:flex-row">
+                <!-- Screenshot -->
+                <div class="lg:w-1/2">
+                    {{ if .image }}
+                    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="block h-full">
+                        <img src="{{ .image }}" alt="{{ .name }}" class="w-full h-full min-h-[280px] object-cover hover:scale-[1.02] transition duration-500">
+                    </a>
+                    {{ else }}
+                    <div class="flex items-center justify-center h-full min-h-[280px] bg-zinc-900 text-zinc-500 text-6xl">
+                        <i class="{{ .icon }}"></i>
+                    </div>
+                    {{ end }}
+                </div>
+                <!-- Content -->
+                <div class="lg:w-1/2 p-8 lg:p-10 flex flex-col justify-center">
+                    <div class="flex items-center gap-2 text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-3">
+                        <i class="{{ .icon }}"></i>
+                        <span>{{ .subtitle }}</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-zinc-900 mb-3">{{ .name }}</h3>
+                    <p class="text-zinc-500 leading-relaxed mb-6">{{ .description }}</p>
+
+                    {{ if .metrics }}
+                    <div class="flex gap-8 py-4 border-t border-b border-zinc-200 mb-6">
+                        {{ range .metrics }}
+                        <div>
+                            <div class="text-xl font-bold text-zinc-900">{{ .value }}</div>
+                            <div class="text-xs text-zinc-400 uppercase tracking-wider mt-1">{{ .label }}</div>
+                        </div>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        {{ range .tags }}
+                        <span class="bg-zinc-100 text-zinc-600 px-3 py-1 rounded-full text-sm font-medium">{{ . }}</span>
+                        {{ end }}
+                    </div>
+
+                    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-zinc-900 font-semibold border-2 border-zinc-900 px-6 py-2 rounded-full hover:bg-zinc-900 hover:text-white transition text-sm uppercase tracking-wider w-fit">
+                        View Live Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+
+        <div class="text-center mt-4">
+            <a href="/portfolio/" class="inline-flex items-center gap-2 bg-zinc-900 text-white font-semibold px-8 py-3 rounded-full hover:bg-zinc-700 transition text-sm uppercase tracking-wider">
+                View All Projects <i class="fas fa-long-arrow-alt-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
+{{ end }}
+
+<!-- Testimonials Section -->
+{{ if .Site.Params.testimonials.enable }}
+{{ if isset .Site.Data "testimonials" }}
+<section class="py-20">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">{{ .Site.Params.testimonials.title }}</h2>
+        <p class="text-lg text-zinc-500 max-w-xl mx-auto">{{ .Site.Params.testimonials.subtitle }}</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {{ range .Site.Data.testimonials }}
+        <div class="bg-zinc-100 rounded-2xl p-8 hover:bg-zinc-200 transition">
+            <div class="text-zinc-500 leading-relaxed mb-6 text-lg italic">"{{ .text }}"</div>
+            <div class="flex items-center gap-4">
+                {{ if .avatar }}
+                <img src="/{{ .avatar }}" alt="{{ .name }}" class="w-12 h-12 rounded-full object-cover">
+                {{ end }}
+                <div>
+                    <div class="font-bold text-zinc-900">{{ .name }}</div>
+                    <div class="text-sm text-zinc-500">{{ .position }}</div>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+{{ end }}
+
+<!-- CTA Section -->
+{{ if .Site.Params.see_more.enable }}
+<section class="bg-zinc-900 -mx-4 md:-mx-6 lg:-mx-8 py-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">{{ .Site.Params.see_more.title }}</h2>
+        <p class="text-lg text-zinc-300 max-w-xl mx-auto mb-10">{{ .Site.Params.see_more.subtitle }}</p>
+        <a href="{{ .Site.Params.see_more.link_url }}" class="inline-block bg-white text-zinc-900 font-semibold px-8 py-3 rounded-full hover:bg-zinc-200 transition text-sm uppercase tracking-wider">
+            {{ .Site.Params.see_more.link_text }}
+        </a>
+    </div>
+</section>
+{{ end }}
+
+{{ end }}

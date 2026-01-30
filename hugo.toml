@@ -1,6 +1,6 @@
 baseURL = "/"
 title = "Puboods - Software Development & Outsourcing"
-theme = "hugo-universal-theme"
+theme = "pehtheme-hugo"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 
@@ -41,63 +41,21 @@ pluralizelisttitles = false
     url = "/contact/"
     weight = 5
 
-# Top bar social links menu (disabled)
-
 [params]
     author = "Puboods Pty Ltd"
+    description = "Professional software development and outsourcing services - Build Better Software. Faster."
     defaultKeywords = ["software development", "outsourcing", "web development", "mobile apps"]
-    defaultDescription = "Professional software development and outsourcing services - Build Better Software. Faster."
-
-    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
-    style = "blue"
-
-    # Contact form settings (disabled)
-    formspree_action = ""
-    contact_form_ajax = false
-
-    about_us = "<p>Puboods is a leading software development company specializing in custom web and mobile applications, AI solutions, and blockchain development.</p>"
+    mainSections = "posts"
     copyright = "Copyright (c) 2024, Puboods Pty Ltd; all rights reserved."
+    logo = "img/logo.svg"
+    contact_url = "/contact"
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
 
-    dropdown_mouse_over = false
-
-    disabled_logo = false
-    logo_text = "Puboods"
-    logo = "img/logo.svg"
-    logo_small = "img/logo.svg"
-    contact_url = "/contact"
-    
-    address = """<p class="text-uppercase"><strong>Puboods Pty Ltd</strong>
-        <br>Software Development Services
-        <br>Australia
-        <br>
-        <strong>Email: hi@puboods.com</strong>
-      </p>
-      """
-
-# Enable or disable top bar with social icons
-[params.topbar]
-    enable = false
-    text = ""
-
-# Enable and disable widgets for the right sidebar
-[params.widgets]
-    categories = true
-    tags = true
-    search = true
-
-[params.carouselHomepage]
-    enable = true
-    auto_play = true
-    slide_speed = 2000
-    pagination_speed = 1000
-
 [params.features]
     enable = true
-    cols = 3
-    
+
 [params.projects]
     enable = true
     title = "Featured Projects"
@@ -116,16 +74,12 @@ pluralizelisttitles = false
     link_url = "https://calendly.com/bobjiang"
     link_text = "Schedule Free Consultation"
 
-[params.clients]
-    enable = false
-
-[params.recent_posts]
-    enable = false
-
-[params.footer.recent_posts]
-    enable = false
-
 [taxonomies]
     category = "categories"
     tag = "tags"
     author = "authors"
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"

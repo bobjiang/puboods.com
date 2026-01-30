@@ -1,327 +1,159 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+{{ define "main" }}
 
-  <head>
-    {{ partial "headers.html" . }}
-    {{ partial "custom_headers.html" . }}
-  </head>
-
-  <body>
-
-    <div id="all">
-
-        {{ partial "top.html" . }}
-
-        {{ partial "nav.html" . }}
-
-<style>
-    :root {
-        --accent: #de1c7d;
-        --accent-hover: #111;
-        --dark: #111;
-        --heading: #1a1a2e;
-        --body-text: #555;
-        --light-bg: #f5f5f7;
-        --white: #fff;
-        --border: #e8e8e8;
-        --card-shadow: 0 3px 30px rgba(0,0,0,0.07);
-        --card-shadow-hover: 0 8px 40px rgba(0,0,0,0.12);
-        --radius: 12px;
-        --radius-pill: 30px;
-        --font-heading: "Poppins", sans-serif;
-        --font-body: "Inter", "Roboto", sans-serif;
-    }
-
-    .main-wrapper h1,
-    .main-wrapper h2,
-    .main-wrapper h3,
-    .main-wrapper h4,
-    .main-wrapper h5,
-    .main-wrapper h6 {
-        font-family: var(--font-heading);
-    }
-
-    .main-wrapper .text-color-base-dark {
-        color: var(--heading);
-    }
-
-    .main-wrapper .text-color-grey-600 {
-        color: var(--body-text);
-    }
-
-    .main-wrapper .text-color-grey-700 {
-        color: var(--body-text);
-    }
-
-    .main-wrapper .service-card {
-        transition: box-shadow 0.3s ease, transform 0.3s ease;
-    }
-
-    .main-wrapper .service-card:hover {
-        box-shadow: var(--card-shadow-hover);
-        transform: translateY(-4px);
-    }
-
-    .main-wrapper .button.is-large,
-    .main-wrapper a.button.is-large {
-        background: var(--accent);
-        color: var(--white);
-        border-radius: var(--radius-pill);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-family: var(--font-heading);
-        font-weight: 600;
-        font-size: 14px;
-        padding: 14px 32px;
-        display: inline-block;
-        text-decoration: none;
-        border: none;
-        cursor: pointer;
-        transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    .main-wrapper .button.is-large:hover,
-    .main-wrapper a.button.is-large:hover {
-        background: var(--accent-hover);
-        color: var(--white);
-    }
-
-    .main-wrapper .button-secondary.is-large,
-    .main-wrapper a.button-secondary.is-large {
-        background: transparent;
-        border: 2px solid var(--accent);
-        color: var(--accent);
-        border-radius: var(--radius-pill);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-family: var(--font-heading);
-        font-weight: 600;
-        font-size: 14px;
-        padding: 14px 32px;
-        display: inline-block;
-        text-decoration: none;
-        cursor: pointer;
-        transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    .main-wrapper .button-secondary.is-large:hover,
-    .main-wrapper a.button-secondary.is-large:hover {
-        background: var(--accent);
-        color: var(--white);
-    }
-</style>
-
-<main class="main-wrapper">
-    <!-- Hero Section -->
-    <header class="position-relative" style="background: var(--dark); min-height: 60vh;">
-        <div class="page-padding">
-            <div class="container-large">
-                <div class="padding-vertical padding-xxxlarge text-align-center">
-                    <div class="container-small">
-                        <h1 class="heading-huge text-color-white">{{ .Title }}</h1>
-                        <div class="spacer-medium"></div>
-                        <p class="paragraph-xlarge text-color-white opacity-90">{{ .Description }}</p>
-                        <div class="spacer-large"></div>
-                        <div class="buttonwrapper center-button">
-                            <a href="https://calendly.com/bobjiang" class="button is-large w-inline-block">
-                                <div>Get Started Today</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Services Grid -->
-    <section class="padding-vertical padding-xxxlarge">
-        <div class="page-padding">
-            <div class="container-large">
-                <div class="text-align-center margin-bottom margin-xxxlarge">
-                    <h2 class="heading-large text-color-base-dark">Comprehensive Software Solutions</h2>
-                    <div class="spacer-small"></div>
-                    <p class="paragraph-large text-color-grey-600">From MVP to enterprise-scale platforms, we deliver with transparency and agile processes</p>
-                </div>
-
-                <!-- Service Cards Grid -->
-                <div class="grid-3col gap-large is-2col-tablet is-1col-mobile">
-                    <!-- Custom Web & Mobile Development -->
-                    <div class="service-card padding-large border-radius-large background-white" style="box-shadow: var(--card-shadow); border: 1px solid var(--border); border-radius: var(--radius);">
-                        <div class="service-icon margin-bottom margin-medium">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                                <div style="color: white; font-size: 24px; font-weight: bold;">⚡</div>
-                            </div>
-                        </div>
-                        <h3 class="heading-medium text-color-base-dark margin-bottom margin-small">Custom Web & Mobile</h3>
-                        <p class="paragraph-medium text-color-grey-600 margin-bottom margin-medium">Scalable applications with React, Next.js, React Native & Flutter for modern user experiences.</p>
-                        <ul class="text-left">
-                            <li class="paragraph-small margin-bottom margin-tiny text-color-grey-700">✓ Progressive Web Apps (PWAs)</li>
-                            <li class="paragraph-small margin-bottom margin-tiny text-color-grey-700">✓ Cross-platform mobile apps</li>
-                            <li class="paragraph-small text-color-grey-700">✓ Robust backend systems</li>
-                        </ul>
-                    </div>
-
-                    <!-- MVP Development -->
-                    <div class="service-card padding-large border-radius-large background-white" style="box-shadow: var(--card-shadow); border: 1px solid var(--border); border-radius: var(--radius);">
-                        <div class="service-icon margin-bottom margin-medium">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                                <div style="color: white; font-size: 24px; font-weight: bold;">🚀</div>
-                            </div>
-                        </div>
-                        <h3 class="heading-medium text-color-base-dark margin-bottom margin-small">MVP Development</h3>
-                        <p class="paragraph-medium text-color-grey-600 margin-bottom margin-medium">Fast-track your product to market with rapid prototyping and agile methodology.</p>
-                        <ul class="text-left">
-                            <li class="paragraph-small margin-bottom margin-tiny text-color-grey-700">✓ 2-4 week rapid prototyping</li>
-                            <li class="paragraph-small margin-bottom margin-tiny text-color-grey-700">✓ User validation integration</li>
-                            <li class="paragraph-small text-color-grey-700">✓ Scalable architecture</li>
-                        </ul>
-                    </div>
-
-                    <!-- Cloud Solutions -->
-                    <div class="service-card padding-large border-radius-large background-white" style="box-shadow: var(--card-shadow); border: 1px solid var(--border); border-radius: var(--radius);">
-                        <div class="service-icon margin-bottom margin-medium">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                                <div style="color: white; font-size: 24px; font-weight: bold;">☁️</div>
-                            </div>
-                        </div>
-                        <h3 class="heading-medium text-color-base-dark margin-bottom margin-small">Cloud Solutions</h3>
-                        <p class="paragraph-medium text-color-grey-600 margin-bottom margin-medium">Deploy and scale with AWS, Azure, GCP using microservices and DevOps best practices.</p>
-                        <ul class="text-left">
-                            <li class="paragraph-small margin-bottom margin-tiny text-color-grey-700">✓ Multi-cloud deployment</li>
-                            <li class="paragraph-small margin-bottom margin-tiny text-color-grey-700">✓ CI/CD pipeline setup</li>
-                            <li class="paragraph-small text-color-grey-700">✓ Cloud migration</li>
-                        </ul>
-                    </div>
-
-                    <!-- AI & ML -->
-                    <div class="service-card padding-large border-radius-large background-white" style="box-shadow: var(--card-shadow); border: 1px solid var(--border); border-radius: var(--radius);">
-                        <div class="service-icon margin-bottom margin-medium">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #a8edea, #fed6e3); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                                <div style="color: #333; font-size: 24px; font-weight: bold;">🤖</div>
-                            </div>
-                        </div>
-                        <h3 class="heading-medium text-color-base-dark margin-bottom margin-small">AI & Machine Learning</h3>
-                        <p class="paragraph-medium text-color-grey-600 margin-bottom margin-medium">Intelligent systems with AI agents, predictive analytics, and automation solutions.</p>
-                        <ul class="text-left">
-                            <li class="paragraph-small margin-bottom margin-tiny text-color-grey-700">✓ AI agents & chatbots</li>
-                            <li class="paragraph-small margin-bottom margin-tiny text-color-grey-700">✓ Machine learning models</li>
-                            <li class="paragraph-small text-color-grey-700">✓ Computer vision & NLP</li>
-                        </ul>
-                    </div>
-
-                    <!-- Blockchain -->
-                    <div class="service-card padding-large border-radius-large background-white" style="box-shadow: var(--card-shadow); border: 1px solid var(--border); border-radius: var(--radius);">
-                        <div class="service-icon margin-bottom margin-medium">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #fbc2eb, #a6c1ee); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                                <div style="color: #333; font-size: 24px; font-weight: bold;">⛓️</div>
-                            </div>
-                        </div>
-                        <h3 class="heading-medium text-color-base-dark margin-bottom margin-small">Ethereum DApp</h3>
-                        <p class="paragraph-medium text-color-grey-600 margin-bottom margin-medium">Secure blockchain applications with smart contracts, DeFi protocols, and Web3 integration.</p>
-                        <ul class="text-left">
-                            <li class="paragraph-small margin-bottom margin-tiny text-color-grey-700">✓ Smart contract development</li>
-                            <li class="paragraph-small margin-bottom margin-tiny text-color-grey-700">✓ DeFi & NFT platforms</li>
-                            <li class="paragraph-small text-color-grey-700">✓ Web3 wallet integration</li>
-                        </ul>
-                    </div>
-
-                    <!-- UI/UX Design -->
-                    <div class="service-card padding-large border-radius-large background-white" style="box-shadow: var(--card-shadow); border: 1px solid var(--border); border-radius: var(--radius);">
-                        <div class="service-icon margin-bottom margin-medium">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #fdbb2d, #22c1c3); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                                <div style="color: white; font-size: 24px; font-weight: bold;">🎨</div>
-                            </div>
-                        </div>
-                        <h3 class="heading-medium text-color-base-dark margin-bottom margin-small">UI/UX Design</h3>
-                        <p class="paragraph-medium text-color-grey-600 margin-bottom margin-medium">User-centered design with Figma prototyping, responsive layouts, and accessibility compliance.</p>
-                        <ul class="text-left">
-                            <li class="paragraph-small margin-bottom margin-tiny text-color-grey-700">✓ User research & personas</li>
-                            <li class="paragraph-small margin-bottom margin-tiny text-color-grey-700">✓ Responsive design</li>
-                            <li class="paragraph-small text-color-grey-700">✓ WCAG 2.1 compliance</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="padding-vertical padding-xxxlarge" style="background: var(--dark);">
-        <div class="page-padding">
-            <div class="container-large">
-                <div class="text-align-center">
-                    <h2 class="heading-large text-color-white margin-bottom margin-large">Why Choose Our Services?</h2>
-                    <div class="grid-4col gap-large is-2col-tablet is-1col-mobile">
-                        <div class="text-align-center">
-                            <div class="margin-bottom margin-medium">
-                                <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-                                    <div style="color: white; font-size: 32px;">⚡</div>
-                                </div>
-                            </div>
-                            <h3 class="heading-small text-color-white margin-bottom margin-small">Faster Delivery</h3>
-                            <p class="paragraph-medium text-color-white opacity-90">Launch in weeks, not months</p>
-                        </div>
-                        <div class="text-align-center">
-                            <div class="margin-bottom margin-medium">
-                                <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-                                    <div style="color: white; font-size: 32px;">📋</div>
-                                </div>
-                            </div>
-                            <h3 class="heading-small text-color-white margin-bottom margin-small">Transparent Processes</h3>
-                            <p class="paragraph-medium text-color-white opacity-90">Regular updates and clear communication</p>
-                        </div>
-                        <div class="text-align-center">
-                            <div class="margin-bottom margin-medium">
-                                <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-                                    <div style="color: white; font-size: 32px;">🏆</div>
-                                </div>
-                            </div>
-                            <h3 class="heading-small text-color-white margin-bottom margin-small">Certified Experts</h3>
-                            <p class="paragraph-medium text-color-white opacity-90">Agile delivery you can trust</p>
-                        </div>
-                        <div class="text-align-center">
-                            <div class="margin-bottom margin-medium">
-                                <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-                                    <div style="color: white; font-size: 32px;">🔄</div>
-                                </div>
-                            </div>
-                            <h3 class="heading-small text-color-white margin-bottom margin-small">Flexible Engagement</h3>
-                            <p class="paragraph-medium text-color-white opacity-90">Choose what works for your business</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="padding-vertical padding-xxxlarge">
-        <div class="page-padding">
-            <div class="container-large">
-                <div class="text-align-center">
-                    <h2 class="heading-large text-color-base-dark margin-bottom margin-medium">Ready to Start Your Project?</h2>
-                    <p class="paragraph-xlarge text-color-grey-600 margin-bottom margin-large">Turn your ideas into scalable, high-quality digital products</p>
-                    <div class="buttonwrapper center-button">
-                        <a href="https://calendly.com/bobjiang" class="button is-large w-inline-block">
-                            <div>Schedule Free Consultation</div>
-                        </a>
-                        <div class="spacer-small"></div>
-                        <a href="mailto:hi@puboods.com" class="button-secondary is-large w-inline-block">
-                            <div>Email Us</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-
-        {{ partial "footer.html" . }}
-
+<!-- Hero Section -->
+<section class="bg-zinc-900 -mx-4 md:-mx-6 lg:-mx-8">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-24 md:py-32 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">{{ .Title }}</h1>
+        <p class="text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto mb-10">{{ .Description }}</p>
+        <a href="https://calendly.com/bobjiang" class="inline-block bg-white text-zinc-900 font-semibold px-8 py-3 rounded-full hover:bg-zinc-200 transition text-sm uppercase tracking-wider">
+            Get Started Today
+        </a>
     </div>
-    <!-- /#all -->
+</section>
 
-    {{ partial "scripts.html" . }}
+<!-- Services Grid -->
+<section class="py-20">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Comprehensive Software Solutions</h2>
+        <p class="text-lg text-zinc-500">From MVP to enterprise-scale platforms, we deliver with transparency and agile processes</p>
+    </div>
 
-  </body>
-</html>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Custom Web & Mobile -->
+        <div class="bg-zinc-100 rounded-2xl p-8 hover:bg-zinc-200 transition group">
+            <div class="w-14 h-14 bg-zinc-900 text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                <i class="fas fa-laptop-code text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-zinc-900 mb-3">Custom Web & Mobile</h3>
+            <p class="text-zinc-500 leading-relaxed mb-4">Scalable applications with React, Next.js, React Native & Flutter for modern user experiences.</p>
+            <ul class="text-zinc-600 space-y-2 text-sm">
+                <li>Progressive Web Apps (PWAs)</li>
+                <li>Cross-platform mobile apps</li>
+                <li>Robust backend systems</li>
+            </ul>
+        </div>
+
+        <!-- MVP Development -->
+        <div class="bg-zinc-100 rounded-2xl p-8 hover:bg-zinc-200 transition group">
+            <div class="w-14 h-14 bg-zinc-900 text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                <i class="fas fa-rocket text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-zinc-900 mb-3">MVP Development</h3>
+            <p class="text-zinc-500 leading-relaxed mb-4">Fast-track your product to market with rapid prototyping and agile methodology.</p>
+            <ul class="text-zinc-600 space-y-2 text-sm">
+                <li>2-4 week rapid prototyping</li>
+                <li>User validation integration</li>
+                <li>Scalable architecture</li>
+            </ul>
+        </div>
+
+        <!-- Cloud Solutions -->
+        <div class="bg-zinc-100 rounded-2xl p-8 hover:bg-zinc-200 transition group">
+            <div class="w-14 h-14 bg-zinc-900 text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                <i class="fas fa-cloud text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-zinc-900 mb-3">Cloud Solutions</h3>
+            <p class="text-zinc-500 leading-relaxed mb-4">Deploy and scale with AWS, Azure, GCP using microservices and DevOps best practices.</p>
+            <ul class="text-zinc-600 space-y-2 text-sm">
+                <li>Multi-cloud deployment</li>
+                <li>CI/CD pipeline setup</li>
+                <li>Cloud migration</li>
+            </ul>
+        </div>
+
+        <!-- AI & ML -->
+        <div class="bg-zinc-100 rounded-2xl p-8 hover:bg-zinc-200 transition group">
+            <div class="w-14 h-14 bg-zinc-900 text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                <i class="fas fa-robot text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-zinc-900 mb-3">AI & Machine Learning</h3>
+            <p class="text-zinc-500 leading-relaxed mb-4">Intelligent systems with AI agents, predictive analytics, and automation solutions.</p>
+            <ul class="text-zinc-600 space-y-2 text-sm">
+                <li>AI agents & chatbots</li>
+                <li>Machine learning models</li>
+                <li>Computer vision & NLP</li>
+            </ul>
+        </div>
+
+        <!-- Blockchain -->
+        <div class="bg-zinc-100 rounded-2xl p-8 hover:bg-zinc-200 transition group">
+            <div class="w-14 h-14 bg-zinc-900 text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                <i class="fas fa-link text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-zinc-900 mb-3">Ethereum DApp</h3>
+            <p class="text-zinc-500 leading-relaxed mb-4">Secure blockchain applications with smart contracts, DeFi protocols, and Web3 integration.</p>
+            <ul class="text-zinc-600 space-y-2 text-sm">
+                <li>Smart contract development</li>
+                <li>DeFi & NFT platforms</li>
+                <li>Web3 wallet integration</li>
+            </ul>
+        </div>
+
+        <!-- UI/UX Design -->
+        <div class="bg-zinc-100 rounded-2xl p-8 hover:bg-zinc-200 transition group">
+            <div class="w-14 h-14 bg-zinc-900 text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                <i class="fas fa-paint-brush text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-zinc-900 mb-3">UI/UX Design</h3>
+            <p class="text-zinc-500 leading-relaxed mb-4">User-centered design with Figma prototyping, responsive layouts, and accessibility compliance.</p>
+            <ul class="text-zinc-600 space-y-2 text-sm">
+                <li>User research & personas</li>
+                <li>Responsive design</li>
+                <li>WCAG 2.1 compliance</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="bg-zinc-900 -mx-4 md:-mx-6 lg:-mx-8 py-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-16">Why Choose Our Services?</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="w-16 h-16 bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-bolt text-white text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Faster Delivery</h3>
+                <p class="text-zinc-400">Launch in weeks, not months</p>
+            </div>
+            <div>
+                <div class="w-16 h-16 bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-clipboard-list text-white text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Transparent Processes</h3>
+                <p class="text-zinc-400">Regular updates and clear communication</p>
+            </div>
+            <div>
+                <div class="w-16 h-16 bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-trophy text-white text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Certified Experts</h3>
+                <p class="text-zinc-400">Agile delivery you can trust</p>
+            </div>
+            <div>
+                <div class="w-16 h-16 bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-sync-alt text-white text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Flexible Engagement</h3>
+                <p class="text-zinc-400">Choose what works for your business</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Ready to Start Your Project?</h2>
+    <p class="text-lg text-zinc-500 max-w-xl mx-auto mb-10">Turn your ideas into scalable, high-quality digital products</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://calendly.com/bobjiang" class="inline-block bg-zinc-900 text-white font-semibold px-8 py-3 rounded-full hover:bg-zinc-700 transition text-sm uppercase tracking-wider">
+            Schedule Free Consultation
+        </a>
+        <a href="mailto:hi@puboods.com" class="inline-block border-2 border-zinc-900 text-zinc-900 font-semibold px-8 py-3 rounded-full hover:bg-zinc-900 hover:text-white transition text-sm uppercase tracking-wider">
+            Email Us
+        </a>
+    </div>
+</section>
+
+{{ end }}

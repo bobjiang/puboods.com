@@ -1,0 +1,21 @@
+{
+  "name": "puboods-site",
+  "version": "1.0.0",
+  "description": "Puboods company website built with Hugo and pehtheme-hugo",
+  "scripts": {
+    "dev:generate": "npx tailwindcss -i ./assets/input.css -o ./themes/pehtheme-hugo/assets/css/main.css -w",
+    "dev:hugo": "hugo server",
+    "dev": "run-p dev:*",
+    "build:css": "npx tailwindcss -i ./assets/input.css -o ./themes/pehtheme-hugo/assets/css/main.css",
+    "build:hugo": "hugo",
+    "build": "run-s build:css build:hugo"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.16",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.3.3"
+  }
+}
