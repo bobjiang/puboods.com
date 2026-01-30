@@ -1,6 +1,7 @@
 +++
 title = "Industries We Serve - Specialized Software Expertise"
 description = "Deep domain expertise in FinTech, Healthcare, eCommerce, and Blockchain industries with proven compliance and scalability."
+layout = "industries"
 +++
 
 # Industry Expertise That Delivers Results

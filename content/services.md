@@ -1,6 +1,7 @@
 +++
 title = "Our Services - End-to-End Software Development"
 description = "From idea to deployment. Comprehensive software development services including web, mobile, AI, blockchain, and cloud solutions."
+layout = "services"
 +++
 
 # End-to-End Development Services
