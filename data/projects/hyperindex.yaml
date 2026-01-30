@@ -1,0 +1,12 @@
+weight: 2
+name: "Hyper Index"
+subtitle: "On-Chain Index Trading Platform"
+description: "Developed an on-chain index trading platform that allows users to trade diversified crypto index products. Features include real-time portfolio tracking, automated rebalancing, and a modern trading interface with advanced charting capabilities."
+url: "https://www.hyperindex.trade/"
+icon: "fas fa-layer-group"
+tags:
+  - "Blockchain"
+  - "DeFi"
+  - "Next.js"
+  - "TypeScript"
+  - "Web3"

@@ -1,0 +1,12 @@
+weight: 1
+name: "ApeX Omni"
+subtitle: "Decentralized Perpetual Trading Platform"
+description: "Built a high-performance decentralized perpetual trading platform enabling traders to access crypto markets with up to 100x leverage. The platform features real-time order books, cross-margin trading, and seamless wallet integration across multiple blockchain networks."
+url: "https://omni.apex.exchange/trade/BTCUSDT"
+icon: "fas fa-chart-line"
+tags:
+  - "Blockchain"
+  - "DeFi"
+  - "Smart Contracts"
+  - "React"
+  - "Web3"

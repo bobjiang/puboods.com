@@ -98,6 +98,11 @@ pluralizelisttitles = false
     enable = true
     cols = 3
     
+[params.projects]
+    enable = true
+    title = "Featured Projects"
+    subtitle = "Real-world solutions we've built for clients in the blockchain and fintech space."
+
 [params.testimonials]
     enable = true
     title = "Client Success Stories"
