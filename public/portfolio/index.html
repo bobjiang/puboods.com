@@ -36,7 +36,7 @@
 
 
 
-<link href="/css/custom.css?1769752417" rel="stylesheet">
+<link href="/css/custom.css?1769753193" rel="stylesheet">
 
 
 
@@ -74,7 +74,11 @@
 <meta name="twitter:description" content="Explore innovative blockchain and DeFi projects we&rsquo;ve built. From perpetual trading platforms to advanced token exchanges.">
 
 
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/custom.css">
+
   </head>
 
   <body>
@@ -409,11 +413,11 @@ Complex DeFi mechanics hidden behind intuitive interfaces that both beginners an
                     <h2 class="heading-large text-color-white margin-bottom margin-medium">Ready to Build Your Project?</h2>
                     <p class="paragraph-xlarge text-color-white opacity-90 margin-bottom margin-large">From DeFi protocols to enterprise platforms, we turn ambitious ideas into production software.</p>
                     <div class="buttonwrapper center-button">
-                        <a href="https://calendly.com/bobjiang" class="button is-large w-inline-block" style="background: white; color: #667eea;">
+                        <a href="https://calendly.com/bobjiang" class="button is-large w-inline-block" style="background: var(--white); color: var(--accent);">
                             <div>Schedule Free Consultation</div>
                         </a>
                         <div class="spacer-small"></div>
-                        <a href="mailto:hi@puboods.com" class="button-secondary is-large w-inline-block" style="border-color: white; color: white;">
+                        <a href="mailto:hi@puboods.com" class="button-secondary is-large w-inline-block" style="border-color: var(--white); color: var(--white);">
                             <div>Email Us</div>
                         </a>
                     </div>
@@ -426,7 +430,7 @@ Complex DeFi mechanics hidden behind intuitive interfaces that both beginners an
 <style>
  
 .portfolio-hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--dark);
     min-height: 50vh;
     display: flex;
     align-items: center;
@@ -434,14 +438,18 @@ Complex DeFi mechanics hidden behind intuitive interfaces that both beginners an
 
  
 .portfolio-section-title {
+    font-family: var(--font-heading);
     font-size: 32px;
     font-weight: 700;
-    color: #1a202c;
+    color: var(--heading);
     margin-bottom: 8px;
 }
 .portfolio-section-subtitle {
+    font-family: var(--font-heading);
     font-size: 17px;
-    color: #64748b;
+    color: var(--body-text);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     margin-bottom: 48px;
     max-width: 560px;
 }
@@ -454,15 +462,17 @@ Complex DeFi mechanics hidden behind intuitive interfaces that both beginners an
  
 .pf-card {
     display: flex;
-    background: #fff;
-    border-radius: 16px;
+    background: var(--white);
+    border-radius: var(--radius);
     overflow: hidden;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    border: 1px solid var(--border);
+    box-shadow: var(--card-shadow);
     margin-bottom: 48px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
 .pf-card:hover {
-    box-shadow: 0 8px 36px rgba(102,126,234,0.14);
+    box-shadow: var(--card-shadow-hover);
+    border-color: var(--accent);
     transform: translateY(-3px);
 }
 .pf-card__media {
@@ -486,7 +496,7 @@ Complex DeFi mechanics hidden behind intuitive interfaces that both beginners an
     justify-content: center;
     height: 100%;
     min-height: 380px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--dark);
     font-size: 72px;
     color: rgba(255,255,255,0.5);
 }
@@ -501,7 +511,8 @@ Complex DeFi mechanics hidden behind intuitive interfaces that both beginners an
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #667eea;
+    color: var(--accent);
+    font-family: var(--font-heading);
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
@@ -509,14 +520,16 @@ Complex DeFi mechanics hidden behind intuitive interfaces that both beginners an
     margin-bottom: 10px;
 }
 .pf-card__title {
+    font-family: var(--font-heading);
     font-size: 30px;
     font-weight: 700;
-    color: #1a202c;
+    color: var(--heading);
     margin: 0 0 14px;
 }
 .pf-card__desc {
+    font-family: var(--font-body);
     font-size: 15px;
-    color: #4a5568;
+    color: var(--body-text);
     line-height: 1.75;
     margin-bottom: 24px;
 }
@@ -525,17 +538,19 @@ Complex DeFi mechanics hidden behind intuitive interfaces that both beginners an
     gap: 32px;
     margin-bottom: 24px;
     padding: 18px 0;
-    border-top: 1px solid #edf2f7;
-    border-bottom: 1px solid #edf2f7;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 .pf-card__stat-value {
+    font-family: var(--font-heading);
     font-size: 24px;
     font-weight: 700;
-    color: #1a202c;
+    color: var(--heading);
 }
 .pf-card__stat-label {
+    font-family: var(--font-heading);
     font-size: 12px;
-    color: #94a3b8;
+    color: #999;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-top: 2px;
@@ -547,8 +562,8 @@ Complex DeFi mechanics hidden behind intuitive interfaces that both beginners an
     margin-bottom: 24px;
 }
 .pf-card__tag {
-    background: #eef2ff;
-    color: #667eea;
+    background: #fce4ef;
+    color: var(--accent);
     padding: 5px 14px;
     border-radius: 20px;
     font-size: 13px;
@@ -558,39 +573,48 @@ Complex DeFi mechanics hidden behind intuitive interfaces that both beginners an
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: #667eea;
+    color: var(--accent);
+    font-family: var(--font-heading);
     font-weight: 600;
     font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     text-decoration: none;
-    transition: color 0.2s ease;
+    padding: 10px 24px;
+    border: 2px solid var(--accent);
+    border-radius: var(--radius-pill);
+    transition: color 0.2s ease, background 0.2s ease;
 }
 .pf-card__cta:hover {
-    color: #764ba2;
+    color: var(--white);
+    background: var(--accent);
     text-decoration: none;
 }
 
  
 .portfolio-content {
     padding: 60px 0 80px;
-    background: #f7f8fc;
+    background: var(--light-bg);
 }
 .content img {
     max-width: 100%;
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow-hover);
     margin: 2rem 0;
 }
 .content h2 {
+    font-family: var(--font-heading);
     margin-top: 3rem;
     margin-bottom: 1rem;
-    color: #1a202c;
+    color: var(--heading);
     font-size: 26px;
 }
 .content h3 {
+    font-family: var(--font-heading);
     margin-top: 2rem;
     margin-bottom: 0.75rem;
-    color: #2d3748;
+    color: var(--heading);
 }
 .content ul {
     margin-left: 1.5rem;
@@ -601,33 +625,46 @@ Complex DeFi mechanics hidden behind intuitive interfaces that both beginners an
     line-height: 1.6;
 }
 .content p {
+    font-family: var(--font-body);
     margin-bottom: 1rem;
     line-height: 1.8;
-    color: #4a5568;
+    color: var(--body-text);
 }
 .content a {
-    color: #667eea;
+    color: var(--accent);
     text-decoration: none;
     font-weight: 600;
 }
 .content a:hover {
-    color: #764ba2;
+    color: var(--accent-hover);
     text-decoration: underline;
 }
 .content hr {
     margin: 3rem 0;
     border: none;
-    border-top: 2px solid #e2e8f0;
+    border-top: 2px solid var(--border);
 }
 .content strong {
-    color: #2d3748;
+    color: var(--heading);
     font-weight: 600;
 }
 
  
 .portfolio-cta {
     padding: 80px 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--dark);
+}
+.portfolio-cta .button.is-large {
+    border-radius: var(--radius-pill);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--font-heading);
+}
+.portfolio-cta .button-secondary.is-large {
+    border-radius: var(--radius-pill);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--font-heading);
 }
 
  

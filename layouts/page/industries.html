@@ -16,17 +16,17 @@
 
 <main class="main-wrapper">
     <!-- Hero Section -->
-    <header class="position-relative" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%); min-height: 60vh;">
+    <header class="position-relative" style="background: var(--dark); min-height: 60vh;">
         <div class="page-padding">
             <div class="container-large">
                 <div class="padding-vertical padding-xxxlarge text-align-center">
                     <div class="container-small">
-                        <h1 class="heading-huge text-color-base-dark">{{ .Title }}</h1>
+                        <h1 class="heading-huge" style="color: var(--white); font-family: var(--font-heading);">{{ .Title }}</h1>
                         <div class="spacer-medium"></div>
-                        <p class="paragraph-xlarge text-color-base-dark opacity-80">{{ .Description }}</p>
+                        <p class="paragraph-xlarge" style="color: rgba(255,255,255,0.8);">{{ .Description }}</p>
                         <div class="spacer-large"></div>
                         <div class="buttonwrapper center-button">
-                            <a href="https://calendly.com/bobjiang" class="button is-large w-inline-block">
+                            <a href="https://calendly.com/bobjiang" class="button is-large w-inline-block" style="background: var(--accent); color: var(--white); border-radius: var(--radius-pill); text-transform: uppercase; letter-spacing: 1px;">
                                 <div>Explore Our Expertise</div>
                             </a>
                         </div>
@@ -41,153 +41,153 @@
         <div class="page-padding">
             <div class="container-large">
                 <div class="text-align-center margin-bottom margin-xxxlarge">
-                    <h2 class="heading-large text-color-base-dark">Specialized Industry Expertise</h2>
+                    <h2 class="heading-large" style="color: var(--heading); font-family: var(--font-heading);">Specialized Industry Expertise</h2>
                     <div class="spacer-small"></div>
-                    <p class="paragraph-large text-color-grey-600">Deep knowledge of compliance requirements and industry-specific challenges</p>
+                    <p class="paragraph-large" style="color: var(--body-text);">Deep knowledge of compliance requirements and industry-specific challenges</p>
                 </div>
 
                 <!-- Industry Cards -->
                 <div class="grid-2col gap-xlarge is-1col-tablet">
                     <!-- FinTech -->
-                    <div class="industry-card padding-xlarge border-radius-large" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                    <div class="industry-card padding-xlarge border-radius-large" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--card-shadow); transition: all 0.3s ease;">
                         <div class="industry-icon margin-bottom margin-large">
-                            <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
-                                <div style="color: white; font-size: 36px;">💳</div>
+                            <div style="width: 80px; height: 80px; background: #fce4ef; border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                                <div style="color: var(--accent); font-size: 36px;">💳</div>
                             </div>
                         </div>
-                        <h3 class="heading-large margin-bottom margin-medium" style="color: white;">FinTech</h3>
-                        <p class="paragraph-large margin-bottom margin-large" style="color: rgba(255,255,255,0.9);">Transform financial services with secure, scalable, and compliant solutions</p>
-                        
+                        <h3 class="heading-large margin-bottom margin-medium" style="color: var(--heading); font-family: var(--font-heading);">FinTech</h3>
+                        <p class="paragraph-large margin-bottom margin-large" style="color: var(--body-text);">Transform financial services with secure, scalable, and compliant solutions</p>
+
                         <div class="grid-2col gap-medium">
                             <div>
-                                <h4 class="heading-small margin-bottom margin-small" style="color: white;">Payment Platforms</h4>
-                                <ul style="color: rgba(255,255,255,0.8);">
+                                <h4 class="heading-small margin-bottom margin-small" style="color: var(--accent); font-family: var(--font-heading);">Payment Platforms</h4>
+                                <ul style="color: var(--body-text);">
                                     <li class="paragraph-small margin-bottom margin-tiny">Digital wallets</li>
                                     <li class="paragraph-small margin-bottom margin-tiny">Multi-currency support</li>
                                     <li class="paragraph-small">Fraud detection</li>
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="heading-small margin-bottom margin-small" style="color: white;">Trading Systems</h4>
-                                <ul style="color: rgba(255,255,255,0.8);">
+                                <h4 class="heading-small margin-bottom margin-small" style="color: var(--accent); font-family: var(--font-heading);">Trading Systems</h4>
+                                <ul style="color: var(--body-text);">
                                     <li class="paragraph-small margin-bottom margin-tiny">High-frequency trading</li>
                                     <li class="paragraph-small margin-bottom margin-tiny">Portfolio management</li>
                                     <li class="paragraph-small">Real-time market data</li>
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <div class="margin-top margin-large">
-                            <div style="background: rgba(255,255,255,0.2); padding: 16px; border-radius: 8px;">
-                                <p class="paragraph-small" style="color: white;"><strong>Compliance:</strong> PCI-DSS, KYC/AML, GDPR, Open Banking</p>
+                            <div style="background: var(--light-bg); padding: 16px; border-radius: 8px;">
+                                <p class="paragraph-small" style="color: var(--heading);"><strong>Compliance:</strong> PCI-DSS, KYC/AML, GDPR, Open Banking</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- AI & ML -->
-                    <div class="industry-card padding-xlarge border-radius-large" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
+                    <div class="industry-card padding-xlarge border-radius-large" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--card-shadow); transition: all 0.3s ease;">
                         <div class="industry-icon margin-bottom margin-large">
-                            <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
-                                <div style="color: white; font-size: 36px;">🤖</div>
+                            <div style="width: 80px; height: 80px; background: #fce4ef; border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                                <div style="color: var(--accent); font-size: 36px;">🤖</div>
                             </div>
                         </div>
-                        <h3 class="heading-large margin-bottom margin-medium" style="color: white;">AI & Machine Learning</h3>
-                        <p class="paragraph-large margin-bottom margin-large" style="color: rgba(255,255,255,0.9);">Intelligent systems that enhance productivity and decision-making</p>
-                        
+                        <h3 class="heading-large margin-bottom margin-medium" style="color: var(--heading); font-family: var(--font-heading);">AI & Machine Learning</h3>
+                        <p class="paragraph-large margin-bottom margin-large" style="color: var(--body-text);">Intelligent systems that enhance productivity and decision-making</p>
+
                         <div class="grid-2col gap-medium">
                             <div>
-                                <h4 class="heading-small margin-bottom margin-small" style="color: white;">AI Agents</h4>
-                                <ul style="color: rgba(255,255,255,0.8);">
+                                <h4 class="heading-small margin-bottom margin-small" style="color: var(--accent); font-family: var(--font-heading);">AI Agents</h4>
+                                <ul style="color: var(--body-text);">
                                     <li class="paragraph-small margin-bottom margin-tiny">Customer service chatbots</li>
                                     <li class="paragraph-small margin-bottom margin-tiny">Sales automation</li>
                                     <li class="paragraph-small">Process automation</li>
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="heading-small margin-bottom margin-small" style="color: white;">ML Infrastructure</h4>
-                                <ul style="color: rgba(255,255,255,0.8);">
+                                <h4 class="heading-small margin-bottom margin-small" style="color: var(--accent); font-family: var(--font-heading);">ML Infrastructure</h4>
+                                <ul style="color: var(--body-text);">
                                     <li class="paragraph-small margin-bottom margin-tiny">MLOps pipelines</li>
                                     <li class="paragraph-small margin-bottom margin-tiny">Real-time inference</li>
                                     <li class="paragraph-small">Model monitoring</li>
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <div class="margin-top margin-large">
-                            <div style="background: rgba(255,255,255,0.2); padding: 16px; border-radius: 8px;">
-                                <p class="paragraph-small" style="color: white;"><strong>Result:</strong> 94% accuracy in fraud detection, 40% productivity increase</p>
+                            <div style="background: var(--light-bg); padding: 16px; border-radius: 8px;">
+                                <p class="paragraph-small" style="color: var(--heading);"><strong>Result:</strong> 94% accuracy in fraud detection, 40% productivity increase</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Ethereum DApp -->
-                    <div class="industry-card padding-xlarge border-radius-large" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
+                    <div class="industry-card padding-xlarge border-radius-large" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--card-shadow); transition: all 0.3s ease;">
                         <div class="industry-icon margin-bottom margin-large">
-                            <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
-                                <div style="color: white; font-size: 36px;">⛓️</div>
+                            <div style="width: 80px; height: 80px; background: #fce4ef; border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                                <div style="color: var(--accent); font-size: 36px;">⛓️</div>
                             </div>
                         </div>
-                        <h3 class="heading-large margin-bottom margin-medium" style="color: white;">Ethereum DApp</h3>
-                        <p class="paragraph-large margin-bottom margin-large" style="color: rgba(255,255,255,0.9);">Decentralized applications that redefine what's possible in blockchain</p>
-                        
+                        <h3 class="heading-large margin-bottom margin-medium" style="color: var(--heading); font-family: var(--font-heading);">Ethereum DApp</h3>
+                        <p class="paragraph-large margin-bottom margin-large" style="color: var(--body-text);">Decentralized applications that redefine what's possible in blockchain</p>
+
                         <div class="grid-2col gap-medium">
                             <div>
-                                <h4 class="heading-small margin-bottom margin-small" style="color: white;">DeFi Protocols</h4>
-                                <ul style="color: rgba(255,255,255,0.8);">
+                                <h4 class="heading-small margin-bottom margin-small" style="color: var(--accent); font-family: var(--font-heading);">DeFi Protocols</h4>
+                                <ul style="color: var(--body-text);">
                                     <li class="paragraph-small margin-bottom margin-tiny">Decentralized exchanges</li>
                                     <li class="paragraph-small margin-bottom margin-tiny">Yield farming platforms</li>
                                     <li class="paragraph-small">Lending protocols</li>
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="heading-small margin-bottom margin-small" style="color: white;">NFT Marketplaces</h4>
-                                <ul style="color: rgba(255,255,255,0.8);">
+                                <h4 class="heading-small margin-bottom margin-small" style="color: var(--accent); font-family: var(--font-heading);">NFT Marketplaces</h4>
+                                <ul style="color: var(--body-text);">
                                     <li class="paragraph-small margin-bottom margin-tiny">Minting platforms</li>
                                     <li class="paragraph-small margin-bottom margin-tiny">Secondary trading</li>
                                     <li class="paragraph-small">Cross-chain compatibility</li>
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <div class="margin-top margin-large">
-                            <div style="background: rgba(255,255,255,0.2); padding: 16px; border-radius: 8px;">
-                                <p class="paragraph-small" style="color: white;"><strong>Achievement:</strong> $10M+ TVL managed, audited smart contracts</p>
+                            <div style="background: var(--light-bg); padding: 16px; border-radius: 8px;">
+                                <p class="paragraph-small" style="color: var(--heading);"><strong>Achievement:</strong> $10M+ TVL managed, audited smart contracts</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- eCommerce -->
-                    <div class="industry-card padding-xlarge border-radius-large" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333;">
+                    <div class="industry-card padding-xlarge border-radius-large" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--card-shadow); transition: all 0.3s ease;">
                         <div class="industry-icon margin-bottom margin-large">
-                            <div style="width: 80px; height: 80px; background: rgba(0,0,0,0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
-                                <div style="color: #333; font-size: 36px;">🛍️</div>
+                            <div style="width: 80px; height: 80px; background: #fce4ef; border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                                <div style="color: var(--accent); font-size: 36px;">🛍️</div>
                             </div>
                         </div>
-                        <h3 class="heading-large margin-bottom margin-medium" style="color: #333;">eCommerce</h3>
-                        <p class="paragraph-large margin-bottom margin-large" style="color: rgba(51,51,51,0.8);">Scalable online platforms that drive sales and growth</p>
-                        
+                        <h3 class="heading-large margin-bottom margin-medium" style="color: var(--heading); font-family: var(--font-heading);">eCommerce</h3>
+                        <p class="paragraph-large margin-bottom margin-large" style="color: var(--body-text);">Scalable online platforms that drive sales and growth</p>
+
                         <div class="grid-2col gap-medium">
                             <div>
-                                <h4 class="heading-small margin-bottom margin-small" style="color: #333;">Online Platforms</h4>
-                                <ul style="color: rgba(51,51,51,0.7);">
+                                <h4 class="heading-small margin-bottom margin-small" style="color: var(--accent); font-family: var(--font-heading);">Online Platforms</h4>
+                                <ul style="color: var(--body-text);">
                                     <li class="paragraph-small margin-bottom margin-tiny">Multi-vendor marketplaces</li>
                                     <li class="paragraph-small margin-bottom margin-tiny">B2B and B2C solutions</li>
                                     <li class="paragraph-small">Headless commerce</li>
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="heading-small margin-bottom margin-small" style="color: #333;">Mobile Commerce</h4>
-                                <ul style="color: rgba(51,51,51,0.7);">
+                                <h4 class="heading-small margin-bottom margin-small" style="color: var(--accent); font-family: var(--font-heading);">Mobile Commerce</h4>
+                                <ul style="color: var(--body-text);">
                                     <li class="paragraph-small margin-bottom margin-tiny">Progressive Web Apps</li>
                                     <li class="paragraph-small margin-bottom margin-tiny">Native mobile apps</li>
                                     <li class="paragraph-small">Mobile payment integration</li>
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <div class="margin-top margin-large">
-                            <div style="background: rgba(0,0,0,0.1); padding: 16px; border-radius: 8px;">
-                                <p class="paragraph-small" style="color: #333;"><strong>Impact:</strong> 40% conversion rate increase, real-time inventory sync</p>
+                            <div style="background: var(--light-bg); padding: 16px; border-radius: 8px;">
+                                <p class="paragraph-small" style="color: var(--heading);"><strong>Impact:</strong> 40% conversion rate increase, real-time inventory sync</p>
                             </div>
                         </div>
                     </div>
@@ -197,34 +197,34 @@
     </section>
 
     <!-- Compliance Section -->
-    <section class="padding-vertical padding-xxxlarge" style="background: #f8fafc;">
+    <section class="padding-vertical padding-xxxlarge" style="background: var(--light-bg);">
         <div class="page-padding">
             <div class="container-large">
                 <div class="text-align-center margin-bottom margin-xlarge">
-                    <h2 class="heading-large text-color-base-dark">Compliance & Standards</h2>
+                    <h2 class="heading-large" style="color: var(--heading); font-family: var(--font-heading);">Compliance & Standards</h2>
                     <div class="spacer-small"></div>
-                    <p class="paragraph-large text-color-grey-600">We ensure your solution meets industry requirements</p>
+                    <p class="paragraph-large" style="color: var(--body-text);">We ensure your solution meets industry requirements</p>
                 </div>
                 <div class="grid-5col gap-medium is-3col-tablet is-2col-mobile">
-                    <div class="text-align-center padding-medium border-radius-medium background-white" style="box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                        <div class="heading-small text-color-base-dark margin-bottom margin-tiny">PCI-DSS</div>
-                        <p class="paragraph-small text-color-grey-600">Payment security</p>
+                    <div class="text-align-center padding-medium" style="background: var(--white); box-shadow: var(--card-shadow); border-radius: var(--radius);">
+                        <div class="heading-small margin-bottom margin-tiny" style="color: var(--heading); font-family: var(--font-heading);">PCI-DSS</div>
+                        <p class="paragraph-small" style="color: var(--body-text);">Payment security</p>
                     </div>
-                    <div class="text-align-center padding-medium border-radius-medium background-white" style="box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                        <div class="heading-small text-color-base-dark margin-bottom margin-tiny">GDPR</div>
-                        <p class="paragraph-small text-color-grey-600">Data privacy</p>
+                    <div class="text-align-center padding-medium" style="background: var(--white); box-shadow: var(--card-shadow); border-radius: var(--radius);">
+                        <div class="heading-small margin-bottom margin-tiny" style="color: var(--heading); font-family: var(--font-heading);">GDPR</div>
+                        <p class="paragraph-small" style="color: var(--body-text);">Data privacy</p>
                     </div>
-                    <div class="text-align-center padding-medium border-radius-medium background-white" style="box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                        <div class="heading-small text-color-base-dark margin-bottom margin-tiny">SOC 2</div>
-                        <p class="paragraph-small text-color-grey-600">Security controls</p>
+                    <div class="text-align-center padding-medium" style="background: var(--white); box-shadow: var(--card-shadow); border-radius: var(--radius);">
+                        <div class="heading-small margin-bottom margin-tiny" style="color: var(--heading); font-family: var(--font-heading);">SOC 2</div>
+                        <p class="paragraph-small" style="color: var(--body-text);">Security controls</p>
                     </div>
-                    <div class="text-align-center padding-medium border-radius-medium background-white" style="box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                        <div class="heading-small text-color-base-dark margin-bottom margin-tiny">HIPAA</div>
-                        <p class="paragraph-small text-color-grey-600">Healthcare data</p>
+                    <div class="text-align-center padding-medium" style="background: var(--white); box-shadow: var(--card-shadow); border-radius: var(--radius);">
+                        <div class="heading-small margin-bottom margin-tiny" style="color: var(--heading); font-family: var(--font-heading);">HIPAA</div>
+                        <p class="paragraph-small" style="color: var(--body-text);">Healthcare data</p>
                     </div>
-                    <div class="text-align-center padding-medium border-radius-medium background-white" style="box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                        <div class="heading-small text-color-base-dark margin-bottom margin-tiny">ISO 27001</div>
-                        <p class="paragraph-small text-color-grey-600">Information security</p>
+                    <div class="text-align-center padding-medium" style="background: var(--white); box-shadow: var(--card-shadow); border-radius: var(--radius);">
+                        <div class="heading-small margin-bottom margin-tiny" style="color: var(--heading); font-family: var(--font-heading);">ISO 27001</div>
+                        <p class="paragraph-small" style="color: var(--body-text);">Information security</p>
                     </div>
                 </div>
             </div>
@@ -232,18 +232,18 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="padding-vertical padding-xxxlarge">
+    <section class="padding-vertical padding-xxxlarge" style="background: var(--white);">
         <div class="page-padding">
             <div class="container-large">
                 <div class="text-align-center">
-                    <h2 class="heading-large text-color-base-dark margin-bottom margin-medium">Ready to Transform Your Industry?</h2>
-                    <p class="paragraph-xlarge text-color-grey-600 margin-bottom margin-large">Let's discuss how our specialized expertise can drive your business forward</p>
+                    <h2 class="heading-large margin-bottom margin-medium" style="color: var(--heading); font-family: var(--font-heading);">Ready to Transform Your Industry?</h2>
+                    <p class="paragraph-xlarge margin-bottom margin-large" style="color: var(--body-text);">Let's discuss how our specialized expertise can drive your business forward</p>
                     <div class="buttonwrapper center-button">
-                        <a href="https://calendly.com/bobjiang" class="button is-large w-inline-block">
+                        <a href="https://calendly.com/bobjiang" class="button is-large w-inline-block" style="background: var(--accent); color: var(--white); border-radius: var(--radius-pill); text-transform: uppercase; letter-spacing: 1px;">
                             <div>Schedule Free Consultation</div>
                         </a>
                         <div class="spacer-small"></div>
-                        <a href="mailto:hi@puboods.com" class="button-secondary is-large w-inline-block">
+                        <a href="mailto:hi@puboods.com" class="button-secondary is-large w-inline-block" style="border: 2px solid var(--accent); color: var(--accent); border-radius: var(--radius-pill); text-transform: uppercase; letter-spacing: 1px;">
                             <div>Email Us</div>
                         </a>
                     </div>
