@@ -1,8 +1,9 @@
-+++
-title = "Contact Us - Get Your Project Started"
-+++
-
-# Get Your Project Started
+---
+title: "Contact Us"
+description: "Get your software project started. Schedule a free consultation call or email us."
+date: 2024-01-01
+draft: false
+---
 
 Ready to transform your ideas into powerful software solutions? Let's discuss how we can help bring your vision to life.
 
@@ -10,7 +11,7 @@ Ready to transform your ideas into powerful software solutions? Let's discuss ho
 
 The fastest way to get started is to schedule a free consultation call with our team:
 
-**[📅 Schedule a Call with Bob](https://calendly.com/bobjiang)**
+**[Schedule a Call with Bob](https://calendly.com/bobjiang)**
 
 During our call, we'll discuss:
 - Your project requirements and goals
@@ -21,6 +22,7 @@ During our call, we'll discuss:
 ## Other Ways to Reach Us
 
 ### Email
+
 **[hi@puboods.com](mailto:hi@puboods.com)**
 
 Feel free to send us details about your project, and we'll get back to you within 24 hours.
@@ -36,10 +38,10 @@ Feel free to send us details about your project, and we'll get back to you withi
 
 ### Why Choose Puboods?
 
-✅ **Faster Delivery** - Launch in weeks, not months  
-✅ **Transparent Processes** - Regular updates and clear communication  
-✅ **Certified Experts** - Agile delivery you can trust  
-✅ **Flexible Engagement** - Choose what works for your business
+- **Faster Delivery** - Launch in weeks, not months
+- **Transparent Processes** - Regular updates and clear communication
+- **Certified Experts** - Agile delivery you can trust
+- **Flexible Engagement** - Choose what works for your business
 
 ---
 

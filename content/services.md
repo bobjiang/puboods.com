@@ -1,26 +1,27 @@
-+++
-title = "Our Services - End-to-End Software Development"
-description = "From idea to deployment. Comprehensive software development services including web, mobile, AI, blockchain, and cloud solutions."
-layout = "services"
-+++
-
-# End-to-End Development Services
+---
+title: "Our Services"
+description: "End-to-end software development services including web, mobile, AI, blockchain, and cloud solutions."
+date: 2024-01-01
+draft: false
+---
 
 **From an idea to deployment** — We build scalable, production-ready applications using cutting-edge technologies.
 
 ---
 
 ## Web Development
-**React • Next.js • Vue.js • Node.js**
+
+**React, Next.js, Vue.js, Node.js**
 
 Modern web applications that scale with your business:
 - Single Page Applications (SPAs) with seamless user experience
-- Progressive Web Apps (PWAs) for mobile-first performance  
+- Progressive Web Apps (PWAs) for mobile-first performance
 - E-commerce platforms with payment integration
 - Enterprise dashboards and admin panels
 
 ## Mobile Development
-**React Native • Flutter • iOS • Android**
+
+**React Native, Flutter, iOS, Android**
 
 Cross-platform mobile apps that reach every user:
 - Native iOS and Android applications
@@ -29,7 +30,8 @@ Cross-platform mobile apps that reach every user:
 - App Store optimization and deployment
 
 ## AI & Machine Learning
-**Python • TensorFlow • OpenAI • Computer Vision**
+
+**Python, TensorFlow, OpenAI, Computer Vision**
 
 Intelligent systems that automate and optimize:
 - AI chatbots and virtual assistants
@@ -38,7 +40,8 @@ Intelligent systems that automate and optimize:
 - Natural Language Processing (NLP) solutions
 
 ## Blockchain & DeFi
-**Solidity • Ethereum • Web3 • Smart Contracts**
+
+**Solidity, Ethereum, Web3, Smart Contracts**
 
 Decentralized applications for the future of finance:
 - DeFi protocols and yield farming platforms
@@ -48,10 +51,9 @@ Decentralized applications for the future of finance:
 
 ---
 
-# Cutting-Edge Technologies
-
 ## Cloud & DevOps
-**AWS • Azure • GCP • Docker • Kubernetes**
+
+**AWS, Azure, GCP, Docker, Kubernetes**
 
 Scalable infrastructure that grows with you:
 - Microservices architecture and containerization
@@ -60,7 +62,8 @@ Scalable infrastructure that grows with you:
 - Monitoring and performance analytics
 
 ## MVP Development
-**Agile • 2-4 Week Sprints • User Testing**
+
+**Agile, 2-4 Week Sprints, User Testing**
 
 Fast-track your product to market:
 - Rapid prototyping and user validation
@@ -69,7 +72,8 @@ Fast-track your product to market:
 - Post-launch scaling and feature expansion
 
 ## UI/UX Design
-**Figma • User Research • Responsive Design**
+
+**Figma, User Research, Responsive Design**
 
 User-centered design that converts:
 - User journey mapping and wireframing
@@ -78,7 +82,8 @@ User-centered design that converts:
 - Accessibility compliance (WCAG 2.1)
 
 ## Quality Assurance
-**Automated Testing • Security • Performance**
+
+**Automated Testing, Security, Performance**
 
 Production-ready code that you can trust:
 - Test-driven development (TDD)
@@ -90,17 +95,13 @@ Production-ready code that you can trust:
 
 ## Why Choose Puboods?
 
-**Faster Time-to-Market**  
-Launch in weeks, not months with our agile approach
+**Faster Time-to-Market** — Launch in weeks, not months with our agile approach
 
-**Transparent Process**  
-Weekly demos, clear communication, no surprises
+**Transparent Process** — Weekly demos, clear communication, no surprises
 
-**Proven Expertise**  
-50+ successful projects across multiple industries
+**Proven Expertise** — 50+ successful projects across multiple industries
 
-**Flexible Engagement**  
-Fixed-price, hourly, or dedicated team models
+**Flexible Engagement** — Fixed-price, hourly, or dedicated team models
 
 ---
 
@@ -108,4 +109,4 @@ Fixed-price, hourly, or dedicated team models
 
 Transform your ideas into production-ready applications.
 
-**[Get Free Project Estimate](https://calendly.com/bobjiang)** • **[Email Us](mailto:hi@puboods.com)**
+**[Get Free Project Estimate](https://calendly.com/bobjiang)** | **[Email Us](mailto:hi@puboods.com)**

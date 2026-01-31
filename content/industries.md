@@ -1,39 +1,40 @@
-+++
-title = "Industries We Serve - Specialized Software Expertise"
-description = "Deep domain expertise in FinTech, Healthcare, eCommerce, and Blockchain industries with proven compliance and scalability."
-layout = "industries"
-+++
-
-# Industry Expertise That Delivers Results
+---
+title: "Industries We Serve"
+description: "Deep domain expertise in FinTech, Healthcare, eCommerce, and Blockchain industries with proven compliance and scalability."
+date: 2024-01-01
+draft: false
+---
 
 **Deep domain knowledge** meets **cutting-edge technology**. We understand your industry's unique challenges and regulatory requirements.
 
 ---
 
 ## FinTech & Financial Services
-**Secure • Scalable • Compliant**
+
+**Secure, Scalable, Compliant**
 
 Transform financial services with enterprise-grade solutions:
 
 **Digital Payments & Wallets**
 - Multi-currency payment processing with real-time settlements
-- Fraud detection and risk management systems  
+- Fraud detection and risk management systems
 - PCI-DSS compliant architecture and security frameworks
 
-**Trading & Investment Platforms**  
+**Trading & Investment Platforms**
 - High-frequency trading systems with microsecond latency
 - Portfolio management dashboards with real-time analytics
 - Algorithmic trading engines and backtesting tools
 
 **Regulatory Technology**
 - Automated KYC/AML verification systems
-- GDPR-compliant data protection and audit trails  
+- GDPR-compliant data protection and audit trails
 - Open Banking API integrations and financial reporting
 
 ---
 
 ## Healthcare & Telemedicine
-**HIPAA Compliant • Secure • Patient-Focused**
+
+**HIPAA Compliant, Secure, Patient-Focused**
 
 Digital health solutions that improve patient outcomes:
 
@@ -55,18 +56,19 @@ Digital health solutions that improve patient outcomes:
 ---
 
 ## eCommerce & Retail
-**Scalable • Mobile-First • Conversion-Optimized**
+
+**Scalable, Mobile-First, Conversion-Optimized**
 
 Online platforms that drive sales and customer loyalty:
 
-**Multi-Channel Commerce**  
+**Multi-Channel Commerce**
 - Headless commerce with API-first architecture
 - Multi-vendor marketplaces with vendor management
 - Subscription commerce and recurring billing systems
 
 **Mobile Shopping Experience**
 - Progressive Web Apps (PWAs) for lightning-fast mobile experience
-- Native iOS and Android shopping applications  
+- Native iOS and Android shopping applications
 - One-click payments with Apple Pay and Google Pay integration
 
 **Inventory & Supply Chain**
@@ -77,13 +79,14 @@ Online platforms that drive sales and customer loyalty:
 ---
 
 ## Blockchain & DeFi
-**Decentralized • Secure • Future-Ready**
+
+**Decentralized, Secure, Future-Ready**
 
 Next-generation blockchain applications:
 
 **DeFi Protocols**
 - Decentralized exchanges (DEX) with automated market makers
-- Yield farming and liquidity mining platforms  
+- Yield farming and liquidity mining platforms
 - Lending protocols with smart contract security
 
 **NFT & Digital Assets**
@@ -100,17 +103,13 @@ Next-generation blockchain applications:
 
 ## Why Choose Our Industry Expertise?
 
-**Proven Track Record**  
-50+ successful projects across regulated industries
+**Proven Track Record** — 50+ successful projects across regulated industries
 
-**Compliance-First Approach**  
-Built-in compliance with PCI-DSS, HIPAA, GDPR, SOC 2
+**Compliance-First Approach** — Built-in compliance with PCI-DSS, HIPAA, GDPR, SOC 2
 
-**Faster Time-to-Market**  
-Industry templates and pre-built compliance frameworks
+**Faster Time-to-Market** — Industry templates and pre-built compliance frameworks
 
-**Domain Specialists**  
-Teams with deep industry knowledge and technical expertise
+**Domain Specialists** — Teams with deep industry knowledge and technical expertise
 
 ---
 
@@ -130,4 +129,4 @@ Teams with deep industry knowledge and technical expertise
 
 Let our specialized expertise drive your digital transformation.
 
-**[Get Industry-Specific Quote](https://calendly.com/bobjiang)** • **[Email Our Experts](mailto:hi@puboods.com)**
+**[Get Industry-Specific Quote](https://calendly.com/bobjiang)** | **[Email Our Experts](mailto:hi@puboods.com)**

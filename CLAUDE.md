@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Hugo static site for puboods.com — a software development company website. Uses the `hugo-universal-theme` and is hosted on Cloudflare.
+Hugo static site for puboods.com — a software development company website. Uses the `pehtheme-hugo` theme (Tailwind CSS, blog-oriented) and is hosted on Cloudflare.
 
 ## Development Commands
 
@@ -12,61 +12,59 @@ Hugo static site for puboods.com — a software development company website. Use
 - `hugo server -D` — Dev server including draft content
 - `hugo` — Production build (outputs to `public/`)
 - `hugo --minify` — Minified production build
+- `npm run build:css` — Rebuild Tailwind CSS
+- `npm run build` — Full build (CSS + Hugo)
+- `npm run dev` — Dev mode with CSS watch + Hugo server
 
 ## Architecture
 
-### Two Configuration Files
+### Configuration
 
-- **hugo.toml** — Primary config: theme, menus, params, section toggles (carousel, features, projects, testimonials, see_more). Each homepage section can be enabled/disabled via `[params.<section>].enable`.
-- **config.toml** — Production overrides: sets `baseURL = 'https://puboods.com/'` and meta description. Values here override hugo.toml.
-
-### Homepage: Data-Driven Sections
-
-`layouts/index.html` assembles the homepage by calling theme partials in order: carousel → features → projects → testimonials → see_more → recent_posts → clients → footer. Each partial reads from YAML files in `data/`:
-
-| Section | Data directory | Files |
-|---------|---------------|-------|
-| Hero carousel | `data/carousel/` | `hero.yaml` |
-| Service features | `data/features/` | 6 files (web-development, ai-ml, blockchain, cloud-solutions, mvp-development, ui-ux) |
-| Featured projects | `data/projects/` | `apex.yaml`, `hyperindex.yaml` |
-| Testimonials | `data/testimonials/` | `client1.yaml`, `client2.yaml` |
-
-To add/edit homepage content, modify these YAML files — no template changes needed.
-
-### Custom Layouts
-
-Pages with unique designs have custom layout templates in `layouts/_default/`:
-
-- **services.html** — Services page with hero, card grid, benefits section (used by `content/services.md` via `layout: services` frontmatter)
-- **industries.html** — Industries page with industry cards and compliance badges
-- **portfolio.html** — Portfolio page with project showcases
-- **single.html** — Generic single-page layout (default for content pages)
-
-The one custom partial is `layouts/partials/projects.html` (homepage project showcase grid).
-
-### Content Pages
-
-Standard markdown content lives in `content/`:
-- `_index.md` — Homepage
-- `services.md`, `industries.md`, `contact.md` — Top-level pages
-- `portfolio/_index.md` — Portfolio section
-
-Pages select their layout via frontmatter `layout:` field (e.g., `layout: services`).
+- **hugo.toml** — Primary config: theme, menus, params, author info, taxonomies
+- **config.toml** — Production overrides: sets `baseURL = 'https://puboods.com/'` and meta description
 
 ### Theme
 
-Git submodule at `themes/hugo-universal-theme` (from `github.com/devcows/hugo-universal-theme`). Update with:
-```bash
-git submodule update --remote themes/hugo-universal-theme
+Git submodule at `themes/pehtheme-hugo` (Tailwind CSS, blog-oriented). The theme provides:
+- `home.html` — Homepage with featured post hero + category section + recent posts grid
+- `page/single.html` — Static pages with featured image + title + prose content + sidebar
+- `_default/single.html` — Blog posts with author, date, related posts
+- `_default/list.html` — Archive/category listing pages
+
+### Layout Overrides
+
+Only two custom layout files override the theme:
+- **`layouts/_default/home.html`** — Changes the category section from "astronomy" to "projects"
+- **`layouts/partials/footer.html`** — Replaces theme's placeholder text with Puboods branding
+
+### Content Structure
+
 ```
+content/
+  _index.md          — Homepage (uses home.html)
+  services.md        — Services page (rendered by page/single.html)
+  industries.md      — Industries page
+  portfolio.md       — Portfolio page
+  contact.md         — Contact page
+  posts/             — Blog posts (populate homepage grid)
+    apex-omni-case-study.md       — Featured project (tagged "feature" for hero)
+    hyperindex-case-study.md      — Project case study
+    our-services-overview.md      — Services overview post
+    client-success-stories.md     — Testimonials post
+```
+
+Posts with the `feature` tag appear in the homepage hero section. Posts with the `projects` category appear in the homepage category section.
 
 ### Static Assets
 
-- `static/img/` — Logo (`logo.svg`), favicons, portfolio screenshots
-- `static/css/` — FontAwesome CSS
-- `static/js/` — FontAwesome JS
-- `static/webfonts/` — FontAwesome web fonts
+- `static/img/logo.svg` — Site logo
+- `static/img/fav.svg`, `fav.png` — Favicons
+- `static/img/portfolio/` — Portfolio screenshots (apex-omni.jpg, hyper-index.jpg)
 
 ### Deployment
 
 Hosted on Cloudflare. Build output goes to `public/`. The `hugo.toml` uses `baseURL = "/"` (relative) for local dev; `config.toml` sets the production URL.
+
+### Tailwind CSS
+
+CSS is built from `assets/input.css` into the theme's `assets/css/main.css`. Run `npm run build:css` after any Tailwind changes.

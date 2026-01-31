@@ -4,15 +4,12 @@ theme = "pehtheme-hugo"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 
-# Number of words of summarized post content (default 70)
 summaryLength = 70
 
-# Not pluralize title pages by default
 pluralizelisttitles = false
 
-# Define the number of posts per page
 [pagination]
-    pagerSize = 10
+    pagerSize = 6
 
 # Main menu
 [menu]
@@ -42,42 +39,22 @@ pluralizelisttitles = false
     weight = 5
 
 [params]
-    author = "Puboods Pty Ltd"
     description = "Professional software development and outsourcing services - Build Better Software. Faster."
     defaultKeywords = ["software development", "outsourcing", "web development", "mobile apps"]
     mainSections = "posts"
     copyright = "Copyright (c) 2024, Puboods Pty Ltd; all rights reserved."
     logo = "img/logo.svg"
     contact_url = "/contact"
-
-    # Format dates with Go's time formatting
     date_format = "January 2, 2006"
 
-[params.features]
-    enable = true
-
-[params.projects]
-    enable = true
-    title = "Featured Projects"
-    subtitle = "Real-world solutions we've built for clients in the blockchain and fintech space."
-
-[params.testimonials]
-    enable = true
-    title = "Client Success Stories"
-    subtitle = "See what our clients say about working with Puboods for their software development needs."
-
-[params.see_more]
-    enable = true
-    icon = "far fa-file-alt"
-    title = "Ready to Start Your Project?"
-    subtitle = "Transform your ideas into powerful software solutions with our expert team."
-    link_url = "https://calendly.com/bobjiang"
-    link_text = "Schedule Free Consultation"
+[author]
+    name = "Puboods Pty Ltd"
+    bio = "We help startups and growing businesses build world-class software through trusted outsourcing partnerships. Specializing in AI agents, Ethereum DApp development, and custom software solutions."
+    avatar = "/img/logo.svg"
 
 [taxonomies]
     category = "categories"
     tag = "tags"
-    author = "authors"
 
 [module]
   [module.hugoVersion]
