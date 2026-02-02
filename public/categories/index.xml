@@ -6,6 +6,21 @@
     <description>Recent content in Categories on Puboods - Software Development &amp; Outsourcing</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projects</title>
+      <link>/categories/projects/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>/categories/projects/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Services</title>
+      <link>/categories/services/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>/categories/services/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

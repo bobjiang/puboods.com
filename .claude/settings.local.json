@@ -13,7 +13,8 @@
       "WebFetch(domain:fortunaglobal.com.au)",
       "Bash(git restore:*)",
       "Bash(cat:*)",
-      "Bash(git rm:*)"
+      "Bash(git rm:*)",
+      "WebFetch(domain:mercdev.com)"
     ],
     "deny": [],
     "ask": []

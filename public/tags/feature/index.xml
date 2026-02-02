@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Feature on Puboods - Software Development &amp; Outsourcing</title>
+    <link>/tags/feature/</link>
+    <description>Recent content in Feature on Puboods - Software Development &amp; Outsourcing</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/feature/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ApeX Omni: Building a Decentralized Perpetual Trading Platform</title>
+      <link>/posts/apex-omni-case-study/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/apex-omni-case-study/</guid>
+      <description>&lt;p&gt;ApeX Omni is a high-performance perpetual futures DEX with up to 50x leverage, cross-collateral margin, and omnichain liquidity via zkLink. The platform supports 100+ trading pairs with sub-second execution and advanced order types.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;&#xA;&lt;p&gt;Building a decentralized perpetual trading platform requires balancing the speed and reliability traders expect from centralized exchanges with the transparency and security of on-chain settlement. The platform needed to handle high-frequency trading volumes while maintaining strict security standards.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

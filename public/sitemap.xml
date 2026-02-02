@@ -2,30 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/footer/</loc>
+    <loc>/posts/apex-omni-case-study/</loc>
+    <lastmod>2024-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/authors/</loc>
+    <loc>/tags/blockchain/</loc>
+    <lastmod>2024-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
+    <lastmod>2024-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/contact/</loc>
+    <loc>/tags/defi/</loc>
+    <lastmod>2024-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/industries/</loc>
+    <loc>/tags/feature/</loc>
+    <lastmod>2024-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/nav/</loc>
+    <loc>/posts/</loc>
+    <lastmod>2024-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/services/</loc>
-  </url><url>
-    <loc>/how-to/</loc>
-  </url><url>
-    <loc>/portfolio/</loc>
+    <loc>/categories/projects/</loc>
+    <lastmod>2024-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/</loc>
-  </url><url>
-    <loc>/product/</loc>
-  </url><url>
-    <loc>/user-trust/</loc>
+    <lastmod>2024-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
+    <lastmod>2024-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/hyperindex-case-study/</loc>
+    <lastmod>2024-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/ai/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/our-services-overview/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/mobile/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/services/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/web-development/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/client-success-stories/</loc>
+    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/testimonials/</loc>
+    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/contact/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/industries/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/services/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/portfolio/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url>
 </urlset>

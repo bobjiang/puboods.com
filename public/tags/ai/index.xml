@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ai on Puboods - Software Development &amp; Outsourcing</title>
+    <link>/tags/ai/</link>
+    <description>Recent content in Ai on Puboods - Software Development &amp; Outsourcing</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From Idea to Deployment: Our Full-Stack Development Services</title>
+      <link>/posts/our-services-overview/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/our-services-overview/</guid>
+      <description>&lt;p&gt;At Puboods, we help startups and growing businesses turn ideas into scalable, high-quality digital products. Our full-stack development services cover every stage of the product lifecycle.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-we-offer&#34;&gt;What We Offer&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Custom Web &amp;amp; Mobile Development&lt;/strong&gt; — Scalable applications built with React, Next.js, React Native, and Flutter for modern user experiences across all platforms.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;AI &amp;amp; Machine Learning&lt;/strong&gt; — Intelligent systems including AI chatbots, predictive analytics, computer vision, and NLP solutions that automate and optimize business processes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

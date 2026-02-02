@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Puboods - Software Development &amp; Outsourcing</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on Puboods - Software Development &amp; Outsourcing</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ApeX Omni: Building a Decentralized Perpetual Trading Platform</title>
+      <link>/posts/apex-omni-case-study/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/apex-omni-case-study/</guid>
+      <description>&lt;p&gt;ApeX Omni is a high-performance perpetual futures DEX with up to 50x leverage, cross-collateral margin, and omnichain liquidity via zkLink. The platform supports 100+ trading pairs with sub-second execution and advanced order types.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;&#xA;&lt;p&gt;Building a decentralized perpetual trading platform requires balancing the speed and reliability traders expect from centralized exchanges with the transparency and security of on-chain settlement. The platform needed to handle high-frequency trading volumes while maintaining strict security standards.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hyper Index: On-Chain Index Trading Platform</title>
+      <link>/posts/hyperindex-case-study/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/hyperindex-case-study/</guid>
+      <description>&lt;p&gt;Hyper Index is a decentralized token exchange with instant swaps, deep liquidity pools, and real-time portfolio tracking. Built on Ethereum with Chainlink oracles for accurate pricing and a mobile-first responsive design.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;&#xA;&lt;p&gt;Index trading in DeFi needed a platform that could provide accurate, real-time pricing for composite token indices while maintaining deep liquidity and a seamless user experience across devices.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-we-built&#34;&gt;What We Built&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Instant token swaps&lt;/strong&gt; with optimized gas usage and minimal slippage&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Deep liquidity pools&lt;/strong&gt; with automated market making and incentive mechanisms&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Real-time portfolio tracking&lt;/strong&gt; with live price feeds via Chainlink oracles&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Mobile-first responsive design&lt;/strong&gt; for trading on any device&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cross-chain compatibility&lt;/strong&gt; for broader asset access&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-metrics&#34;&gt;Key Metrics&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Liquidity:&lt;/strong&gt; $50M+&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Active Users:&lt;/strong&gt; 10K+&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Security Incidents:&lt;/strong&gt; Zero&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;tech-stack&#34;&gt;Tech Stack&lt;/h2&gt;&#xA;&lt;p&gt;Solidity, Next.js, Web3.js, Chainlink, Ethereum&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>From Idea to Deployment: Our Full-Stack Development Services</title>
+      <link>/posts/our-services-overview/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/our-services-overview/</guid>
+      <description>&lt;p&gt;At Puboods, we help startups and growing businesses turn ideas into scalable, high-quality digital products. Our full-stack development services cover every stage of the product lifecycle.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-we-offer&#34;&gt;What We Offer&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Custom Web &amp;amp; Mobile Development&lt;/strong&gt; — Scalable applications built with React, Next.js, React Native, and Flutter for modern user experiences across all platforms.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;AI &amp;amp; Machine Learning&lt;/strong&gt; — Intelligent systems including AI chatbots, predictive analytics, computer vision, and NLP solutions that automate and optimize business processes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Client Success Stories: Real Results from Real Partnerships</title>
+      <link>/posts/client-success-stories/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/client-success-stories/</guid>
+      <description>&lt;p&gt;Our clients trust us to deliver quality software on time and within budget. Here&amp;rsquo;s what they have to say about working with Puboods.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-our-clients-say&#34;&gt;What Our Clients Say&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;Puboods delivered our fintech platform ahead of schedule with exceptional quality. Their expertise in blockchain and security compliance was exactly what we needed.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;— &lt;strong&gt;Sarah Johnson&lt;/strong&gt;, CTO, FinanceFlow&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;The AI solution they built increased our productivity by 40%. Professional team with transparent communication throughout the project.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
