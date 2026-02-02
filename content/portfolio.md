@@ -9,6 +9,8 @@ draft: false
 
 ### ApeX Omni — Decentralized Perpetual Trading Platform
 
+![ApeX Omni Platform](/img/portfolio/apex-omni.jpg)
+
 High-performance perpetual futures DEX with up to 50x leverage, cross-collateral margin, and omnichain liquidity via zkLink. Supports 100+ trading pairs with sub-second execution and advanced order types.
 
 **Key Metrics:**
@@ -23,6 +25,8 @@ High-performance perpetual futures DEX with up to 50x leverage, cross-collateral
 ---
 
 ### Hyper Index — On-Chain Index Trading Platform
+
+![Hyper Index Platform](/img/portfolio/hyper-index.jpg)
 
 Decentralized token exchange with instant swaps, deep liquidity pools, and real-time portfolio tracking. Built on Ethereum with Chainlink oracles for accurate pricing and mobile-first responsive design.
 
