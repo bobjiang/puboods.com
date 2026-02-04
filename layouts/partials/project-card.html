@@ -9,14 +9,7 @@
       <div class="w-2.5 h-2.5 rounded-full bg-green-500"></div>
     </div>
     <div class="aspect-video">
-      {{- if (strings.HasPrefix .Params.image "http") }}
-      <img class="w-full h-full object-cover" src="{{ .Params.image }}" alt="{{ .Title }}">
-      {{- else }}
-      {{- with $img := resources.Get .Params.image }}
-      {{- $img = $img.Process "resize 750x" }}
-      <img class="w-full h-full object-cover" src="{{ $img.Permalink }}" alt="{{ $.Title }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
-      {{- end }}
-      {{- end }}
+      <img class="w-full h-full object-cover" src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
     </div>
   </div>
   {{ end }}
