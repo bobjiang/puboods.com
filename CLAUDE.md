@@ -6,22 +6,30 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Hugo static site for puboods.com — a software development company website. Uses the `pehtheme-hugo` theme (Tailwind CSS, blog-oriented) and is hosted on Cloudflare.
 
+## Setup
+
+After cloning, initialize the theme submodule and install dependencies:
+
+```
+git submodule update --init --recursive
+npm install
+```
+
 ## Development Commands
 
-- `hugo server` — Dev server with live reload
+- `npm run dev` — Dev mode with CSS watch + Hugo server (preferred for development)
+- `hugo server` — Dev server with live reload (no CSS rebuilding)
 - `hugo server -D` — Dev server including draft content
-- `hugo` — Production build (outputs to `public/`)
-- `hugo --minify` — Minified production build
-- `npm run build:css` — Rebuild Tailwind CSS
-- `npm run build` — Full build (CSS + Hugo)
-- `npm run dev` — Dev mode with CSS watch + Hugo server
+- `npm run build` — Full production build (CSS + Hugo)
+- `npm run build:css` — Rebuild Tailwind CSS only
 
 ## Architecture
 
 ### Configuration
 
-- **hugo.toml** — Primary config: theme, menus, params, author info, taxonomies
-- **config.toml** — Production overrides: sets `baseURL = 'https://puboods.com/'` and meta description
+Hugo automatically merges all `config*.toml` files. The split:
+- **hugo.toml** — Primary config: theme, menus, params, author info, taxonomies. Uses `baseURL = "/"` for local dev.
+- **config.toml** — Production overrides: sets `baseURL = 'https://puboods.com/'` and meta description. Values here win over `hugo.toml`.
 
 ### Theme
 
@@ -63,8 +71,8 @@ Posts with the `feature` tag appear in the homepage hero section. Posts with the
 
 ### Deployment
 
-Hosted on Cloudflare. Build output goes to `public/`. The `hugo.toml` uses `baseURL = "/"` (relative) for local dev; `config.toml` sets the production URL.
+Hosted on Cloudflare. Build output goes to `public/`.
 
 ### Tailwind CSS
 
-CSS is built from `assets/input.css` into the theme's `assets/css/main.css`. Run `npm run build:css` after any Tailwind changes.
+CSS is built from `assets/input.css` into `themes/pehtheme-hugo/assets/css/main.css`. Tailwind scans `content/**/*.md`, `layouts/**/*.html`, and `themes/pehtheme-hugo/**/*.{html,js}` for class usage (configured in `tailwind.config.js`). Run `npm run build:css` after adding new Tailwind classes, or use `npm run dev` which watches for changes automatically.

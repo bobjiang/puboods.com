@@ -1,0 +1,70 @@
+{{ define "main" }}
+
+{{/* Compact hero */}}
+{{ partial "hero.html" (dict "title" .Title "subtitle" .Params.description) }}
+
+<section class="section-padding bg-white">
+  <div class="section-container">
+    <div class="max-w-4xl mx-auto">
+
+      {{/* Meta info */}}
+      <div class="flex flex-wrap items-center gap-4 mb-8 text-sm text-body">
+        <div class="flex items-center space-x-3">
+          {{ with $avatar := resources.Get .Site.Params.Author.avatar }}
+          <img class="w-10 h-10 rounded-full bg-gray-100" src="{{ $avatar.Permalink }}" alt="{{ $.Site.Params.Author.name }}" width="{{ $avatar.Width }}" height="{{ $avatar.Height }}">
+          {{ end }}
+          <span class="font-medium text-dark">{{ .Site.Params.Author.name }}</span>
+        </div>
+        <span class="text-gray-300">|</span>
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        <span class="text-gray-300">|</span>
+        <span>{{ .ReadingTime }} min read</span>
+      </div>
+
+      {{/* Featured image in browser mockup */}}
+      {{ if .Params.image }}
+      <div class="mb-12">
+        {{ partial "browser-mockup.html" (dict "image" (.Params.image | absURL) "alt" .Title) }}
+      </div>
+      {{ end }}
+
+      {{/* Content */}}
+      <article class="prose lg:prose-lg prose-headings:font-heading prose-headings:text-dark prose-a:text-cyan-600 hover:prose-a:text-cyan-700 max-w-none">
+        {{ .Content }}
+      </article>
+
+      {{/* Tags */}}
+      {{ with .Params.tags }}
+      <div class="flex flex-wrap gap-2 mt-10 pt-8 border-t border-gray-100">
+        {{ range . }}
+        <a href="{{ printf "/tags/%s/" . | absURL }}" class="px-3 py-1 text-xs font-medium rounded-full bg-cyan-50 text-cyan-700 hover:bg-cyan-100 transition-colors">{{ . }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+
+    </div>
+  </div>
+</section>
+
+{{/* Related projects */}}
+{{ $related := .Site.RegularPages.Related . | first 2 }}
+{{ with $related }}
+<section class="section-padding bg-surface-alt">
+  <div class="section-container">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark mb-3">Related Projects</h2>
+      <div class="w-16 h-1 bg-gradient-to-r from-cyan-500 to-emerald-500 mx-auto rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      {{ range . }}
+      {{ partial "project-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* CTA */}}
+{{ partial "cta-section.html" . }}
+
+{{ end }}

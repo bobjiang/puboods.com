@@ -46,6 +46,10 @@ pluralizelisttitles = false
     logo = "img/logo.svg"
     contact_url = "/contact"
     date_format = "January 2, 2006"
+    tagline = "Build Better Software. Faster."
+    calendly_url = "https://calendly.com/bobjiang"
+    email = "hi@puboods.com"
+    techLogos = ["React", "Next.js", "TypeScript", "Node.js", "Solidity", "Ethereum", "Python", "AWS"]
 
 [author]
     name = "Puboods Pty Ltd"

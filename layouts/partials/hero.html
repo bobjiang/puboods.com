@@ -1,0 +1,15 @@
+{{/* Compact hero for inner pages. Pass "title" and "subtitle" as context. */}}
+<section class="relative bg-dark overflow-hidden">
+  {{/* Gradient mesh background */}}
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="relative section-container py-16 lg:py-24 text-center">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-4">{{ .title }}</h1>
+    {{ with .subtitle }}
+    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">{{ . }}</p>
+    {{ end }}
+  </div>
+</section>

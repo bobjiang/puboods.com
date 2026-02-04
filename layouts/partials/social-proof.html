@@ -1,0 +1,11 @@
+{{/* Social proof bar — tech logos */}}
+<section class="bg-surface-alt py-12 border-y border-gray-100">
+  <div class="section-container text-center">
+    <p class="text-sm font-medium text-gray-400 uppercase tracking-wider mb-8">Trusted technologies we build with</p>
+    <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+      {{ range .Site.Params.techLogos }}
+      <span class="text-gray-400 hover:text-dark transition-colors font-heading font-semibold text-lg">{{ . }}</span>
+      {{ end }}
+    </div>
+  </div>
+</section>

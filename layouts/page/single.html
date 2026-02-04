@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+{{/* Compact hero */}}
+{{ partial "hero.html" (dict "title" .Title "subtitle" .Params.description) }}
+
+{{/* Page content */}}
+<section class="section-padding bg-white">
+  <div class="section-container">
+    <article class="prose lg:prose-lg prose-headings:font-heading prose-headings:text-dark prose-a:text-cyan-600 hover:prose-a:text-cyan-700 max-w-none">
+      {{ .Content }}
+    </article>
+  </div>
+</section>
+
+{{/* CTA */}}
+{{ partial "cta-section.html" . }}
+
+{{ end }}

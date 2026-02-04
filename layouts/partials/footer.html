@@ -1,43 +1,49 @@
-<div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+<footer class="bg-dark text-white">
+  {{/* Gradient top border */}}
+  <div class="h-1 bg-gradient-to-r from-cyan-500 to-emerald-500"></div>
 
-  <div class="flex flex-wrap space-y-6 mb-4">
+  <div class="section-container py-16 lg:py-20">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
 
-    <div class="w-full md:w-3/5 flex flex-col space-y-4 md:pr-8 lg:pr-10">
+      {{/* Brand column */}}
+      <div class="md:col-span-1">
+        <a href="{{ .Site.BaseURL }}" class="flex items-center space-x-2 mb-4">
+          {{ with .Site.Params.logo }}
+          <img src="{{ . | absURL }}" alt="{{ $.Site.Title }}" class="h-8 brightness-200">
+          {{ end }}
+        </a>
+        <p class="text-lg font-heading font-bold text-gradient mb-3">{{ .Site.Params.tagline }}</p>
+        <p class="text-gray-400 text-sm leading-relaxed">{{ .Site.Params.description }}</p>
+      </div>
 
-      <a class="flex items-center group" href="{{ .Site.BaseURL }}">
-        {{ with .Site.Params.logo }}
-        <img src="{{ . | absURL }}" alt="{{ $.Site.Title }}" class="h-8 mr-2">
-        {{ else }}
-        <span class="text-2xl font-semibold uppercase">{{ .Site.Title }}</span>
-        {{ end }}
-      </a>
+      {{/* Navigation */}}
+      <div>
+        <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-gray-400 mb-4">Navigation</h4>
+        <ul class="space-y-3">
+          {{ range .Site.Menus.main }}
+          <li><a class="text-gray-300 hover:text-cyan-400 transition-colors text-sm" href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
 
-      <p class="font-semibold">Build Better Software. Faster.</p>
-
-      <p>{{ .Site.Params.description }}</p>
+      {{/* Contact */}}
+      <div>
+        <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-gray-400 mb-4">Get in Touch</h4>
+        <ul class="space-y-3">
+          <li>
+            <a href="mailto:{{ .Site.Params.email }}" class="text-gray-300 hover:text-cyan-400 transition-colors text-sm">{{ .Site.Params.email }}</a>
+          </li>
+          <li>
+            <a href="{{ .Site.Params.calendly_url }}" class="text-gray-300 hover:text-cyan-400 transition-colors text-sm" target="_blank" rel="noopener">Schedule a Call</a>
+          </li>
+        </ul>
+      </div>
 
     </div>
 
-    <div class="self-center flex flex-col w-full md:w-2/5">
-
-{{ partial "content/social-media.html" . }}
-
+    {{/* Bottom bar */}}
+    <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+      <p class="text-gray-500 text-sm">{{ .Site.Params.copyright }}</p>
     </div>
-
   </div>
-
-  <div class="my-8">
-    <ul class="flex items-center space-x-4">
-      {{ range .Site.Menus.main }}
-        <li><a class="decoration-auto hover:underline font-semibold" href="{{ .URL }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-  </div>
-
-  <div class="border-t pt-4">
-
-    <p class="text-sm">{{ .Site.Params.copyright }}</p>
-
-  </div>
-
-</div>
+</footer>

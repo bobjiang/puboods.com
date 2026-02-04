@@ -1,0 +1,40 @@
+{{/* Project card for portfolio display. Receives a Hugo page as context. */}}
+<div class="glow-card overflow-hidden">
+  {{/* Browser mockup image */}}
+  {{ if .Params.image }}
+  <div class="rounded-t-2xl overflow-hidden">
+    <div class="bg-gray-900 px-4 py-2 flex items-center space-x-1.5">
+      <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+      <div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+      <div class="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+    </div>
+    <div class="aspect-video">
+      {{- if (strings.HasPrefix .Params.image "http") }}
+      <img class="w-full h-full object-cover" src="{{ .Params.image }}" alt="{{ .Title }}">
+      {{- else }}
+      {{- with $img := resources.Get .Params.image }}
+      {{- $img = $img.Process "resize 750x" }}
+      <img class="w-full h-full object-cover" src="{{ $img.Permalink }}" alt="{{ $.Title }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
+      {{- end }}
+      {{- end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{/* Details */}}
+  <div class="p-6">
+    <h3 class="font-heading font-bold text-xl text-dark mb-2">{{ .Title }}</h3>
+    <p class="text-body text-sm leading-relaxed mb-4">{{ .Params.description }}</p>
+
+    {{/* Tech stack pills */}}
+    {{ with .Params.tags }}
+    <div class="flex flex-wrap gap-2 mb-4">
+      {{ range . }}
+      <span class="px-3 py-1 text-xs font-medium rounded-full bg-cyan-50 text-cyan-700">{{ . }}</span>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <a href="{{ .Permalink }}" class="text-sm font-bold text-gradient hover:opacity-80 transition-opacity">View Case Study &rarr;</a>
+  </div>
+</div>

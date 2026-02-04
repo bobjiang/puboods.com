@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+{{/* Compact hero */}}
+{{ partial "hero.html" (dict "title" (.Title | humanize) "subtitle" (printf "Browse our %s" (.Title | humanize | lower))) }}
+
+<section class="section-padding bg-white">
+  <div class="section-container">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{ range (.Paginator 6).Pages }}
+      {{ partial "project-card.html" . }}
+      {{ end }}
+    </div>
+
+    {{/* Pagination */}}
+    {{ if or .Paginator.HasPrev .Paginator.HasNext }}
+    <div class="flex items-center justify-center mt-12 space-x-4">
+      {{ if .Paginator.HasPrev }}
+      <a class="btn-ghost !px-6 !py-2 text-sm" href="{{ .Paginator.Prev.URL }}">&larr; Previous</a>
+      {{ end }}
+      {{ if .Paginator.HasNext }}
+      <a class="btn-gradient text-sm !px-6 !py-2" href="{{ .Paginator.Next.URL }}">Next &rarr;</a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}

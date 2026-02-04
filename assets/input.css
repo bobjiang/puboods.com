@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body text-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-emerald-500;
+  }
+  .btn-gradient {
+    @apply inline-block bg-gradient-to-r from-cyan-500 to-emerald-500 text-white font-bold rounded-full px-8 py-3 transition-transform duration-300 hover:scale-105 hover:brightness-110;
+  }
+  .btn-ghost {
+    @apply inline-block rounded-full px-8 py-3 font-bold border border-cyan-500 text-gradient transition-transform duration-300 hover:scale-105;
+  }
+  .glow-card {
+    @apply bg-white shadow-md rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:ring-1 hover:ring-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/5;
+  }
+  .section-padding {
+    @apply py-20 lg:py-24;
+  }
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 md:px-6 lg:px-8;
+  }
+}

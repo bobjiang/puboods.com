@@ -1,0 +1,39 @@
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+  <div class="section-container flex items-center justify-between h-16 lg:h-20">
+    {{/* Logo */}}
+    <a href="{{ .Site.BaseURL }}" class="flex items-center space-x-2">
+      {{ with .Site.Params.logo }}
+      <img src="{{ . | absURL }}" alt="{{ $.Site.Title }}" class="h-8">
+      {{ end }}
+    </a>
+
+    {{/* Desktop Nav */}}
+    <nav class="hidden md:flex items-center space-x-8">
+      {{ range .Site.Menus.main }}
+        {{ if ne .Name "Home" }}
+        <a href="{{ .URL }}" class="text-sm font-medium text-dark hover:text-cyan-600 transition-colors">{{ .Name }}</a>
+        {{ end }}
+      {{ end }}
+      <a href="{{ $.Site.Params.calendly_url }}" class="btn-gradient text-sm !px-6 !py-2" target="_blank" rel="noopener">Book a Call</a>
+    </nav>
+
+    {{/* Mobile menu button */}}
+    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  {{/* Mobile Nav */}}
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4">
+    {{ range .Site.Menus.main }}
+      {{ if ne .Name "Home" }}
+      <a href="{{ .URL }}" class="block py-3 text-sm font-medium text-dark hover:text-cyan-600 border-b border-gray-50">{{ .Name }}</a>
+      {{ end }}
+    {{ end }}
+    <a href="{{ $.Site.Params.calendly_url }}" class="btn-gradient text-sm !px-6 !py-2 mt-4 text-center block" target="_blank" rel="noopener">Book a Call</a>
+  </div>
+</header>
+{{/* Spacer for fixed header */}}
+<div class="h-16 lg:h-20"></div>

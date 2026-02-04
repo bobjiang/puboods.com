@@ -6,7 +6,18 @@ module.exports = {
     "./themes/pehtheme-hugo/**/*.{html,js}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        dark: '#0a0a0a',
+        body: '#404040',
+        surface: '#ffffff',
+        'surface-alt': '#f9fafb',
+      },
+      fontFamily: {
+        heading: ['Space Grotesk', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/typography')
