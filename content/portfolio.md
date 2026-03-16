@@ -1,6 +1,6 @@
 ---
 title: "Portfolio"
-description: "Explore innovative blockchain and DeFi projects we've built. From perpetual trading platforms to advanced token exchanges."
+description: "Explore innovative projects we've built — from DeFi trading platforms to AI training workshops, community platforms, and robotics directories."
 date: 2024-01-01
 draft: false
 ---
@@ -38,6 +38,42 @@ Decentralized token exchange with instant swaps, deep liquidity pools, and real-
 **Tech Stack:** Solidity, Next.js, Web3.js, Chainlink, Ethereum
 
 [Visit Hyper Index](https://www.hyperindex.trade/)
+
+---
+
+### AI4All — AI Training Workshop Platform
+
+![AI4All Platform](/img/portfolio/ai4all.jpg)
+
+AI training platform for founders and product leaders. Offers hands-on workshops teaching how to direct AI coding tools to build real software — from idea to shipped product in one day. No programming experience needed.
+
+**Tech Stack:** Hugo, Tailwind CSS, Cloudflare
+
+[Visit AI4All](https://www.ai4all.store/)
+
+---
+
+### 02Ship — Claude Code Community
+
+![02Ship Platform](/img/portfolio/02ship.jpg)
+
+Community platform for learning to build and ship ideas using Claude Code. Features step-by-step courses designed for absolute beginners, blog, events, Discord community, and forum for peer support.
+
+**Tech Stack:** Hugo, Tailwind CSS, Cloudflare
+
+[Visit 02Ship](https://www.02ship.com/)
+
+---
+
+### Awesome Robots — Robotics Directory
+
+![Awesome Robots Platform](/img/portfolio/awesomerobots.jpg)
+
+Curated directory of AI-powered robots featuring detailed specs, brand comparisons, pricing, and blog content. Browse humanoid robots, quadrupeds, and industrial machines from top manufacturers worldwide.
+
+**Tech Stack:** Hugo, Tailwind CSS, Cloudflare
+
+[Visit Awesome Robots](https://www.awesomerobots.xyz/)
 
 ---
 
